@@ -95,10 +95,15 @@ class PortfolioUI {
                 if (!entry.isIntersecting) return;
 
                 const element = entry.target;
-                const rawValue = element.textContent.replace('+', '');
+                const originalText = element.textContent;
+                const hasPlus = originalText.includes('+');
+                const rawValue = originalText.replace('+', '').trim();
                 const target = Number(rawValue);
 
-                if (Number.isNaN(target)) return;
+                if (Number.isNaN(target)) {
+                    observer.unobserve(element);
+                    return;
+                }
 
                 const duration = 1200;
                 const steps = 60;
@@ -108,10 +113,10 @@ class PortfolioUI {
                 const timer = setInterval(() => {
                     current += increment;
                     if (current >= target) {
-                        element.textContent = target + (element.textContent.includes('+') ? '+' : '');
+                        element.textContent = target + (hasPlus ? '+' : '');
                         clearInterval(timer);
                     } else {
-                        element.textContent = Math.floor(current) + (element.textContent.includes('+') ? '+' : '');
+                        element.textContent = Math.floor(current) + (hasPlus ? '+' : '');
                     }
                 }, duration / steps);
 
