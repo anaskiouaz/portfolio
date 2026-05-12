@@ -77,6 +77,7 @@ class ProjectsSystem {
         this.fullscreenViewer = null;
         this.currentProject = null;
         this.scrollPosition = 0;
+        this.defaultFallbackImage = 'img/project_placeholder.svg';
         this.init();
     }
 
@@ -177,7 +178,7 @@ class ProjectsSystem {
             img.addEventListener('error', () => {
                 if (img.dataset.fallbackApplied === 'true') return;
                 img.dataset.fallbackApplied = 'true';
-                img.src = 'img/wirepas_sequence.svg';
+                img.src = this.defaultFallbackImage;
             }, { once: true });
 
             img.addEventListener('click', (e) => {
