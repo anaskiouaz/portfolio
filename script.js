@@ -54,7 +54,7 @@ class PortfolioExperience {
         animateCursor();
 
         // Hover effects
-        const interactiveElements = document.querySelectorAll('a, button, .project-tile');
+        const interactiveElements = document.querySelectorAll('a, button, .project-tile, .project-card');
         
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
@@ -185,7 +185,7 @@ class PortfolioExperience {
 
     // === PROJECT HOVERS ===
     setupProjectHovers() {
-        const projectTiles = document.querySelectorAll('.project-tile');
+        const projectTiles = document.querySelectorAll('.project-tile, .project-card');
 
         projectTiles.forEach(tile => {
             const img = tile.querySelector('.project-img');

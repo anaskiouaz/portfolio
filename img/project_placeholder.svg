@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Image du projet indisponible</title>
+  <desc id="desc">Placeholder générique affiché lorsqu'une image projet n'est pas disponible.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect x="80" y="80" width="1040" height="540" fill="none" stroke="#475569" stroke-width="3" rx="16"/>
+  <circle cx="300" cy="260" r="70" fill="#334155"/>
+  <path d="M170 520 L360 360 L510 500 L690 320 L930 520 Z" fill="#334155"/>
+  <text x="600" y="610" text-anchor="middle" fill="#e2e8f0" font-family="Inter, Segoe UI, sans-serif" font-size="40" font-weight="600">Image du projet indisponible</text>
+</svg>
