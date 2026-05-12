@@ -5,7 +5,7 @@ class ProjectsSystem {
                 title: 'IA Wirepas France',
                 category: 'Intelligence Artificielle',
                 year: '2026',
-                images: ['img/wirepas_dashboard.png', 'img/wirepas_arch.png'], // À ajouter par l'utilisateur
+                images: ['img/wirepas_sequence.svg', 'img/wirepas_sequence.svg'],
                 tech: ['OpenRouter', 'Claude 4.5', 'Streamlit', 'Python', 'Scrapling', 'HubSpot'],
                 context: 'Développement d\'une application (Web/Desktop) durant mon stage chez Wirepas France visant à automatiser la détection et la recommandation de prospects pour les salons professionnels. Le système utilise des pipelines de données complexes intégrant du scraping avancé et des modèles d\'IA de pointe.',
                 role: 'Conception de l\'architecture logicielle, implémentation des pipelines de traitement (scraping, enrichissement via APIs, routage IA via OpenRouter) et création du dashboard de visualisation sous Streamlit.',
@@ -137,7 +137,8 @@ class ProjectsSystem {
         this.currentProject = projectId;
         this.scrollPosition = window.pageYOffset;
         
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add('modal-open');
+        document.body.style.top = `-${this.scrollPosition}px`;
         
         this.populateModal(project);
         
@@ -168,11 +169,15 @@ class ProjectsSystem {
             .join('');
         
         gallery.innerHTML = project.images
-            .map(image => `<img src="${image}" alt="${project.title}" class="gallery-image">`)
+            .map((image, index) => `<img src="${image}" alt="${project.title} - visuel ${index + 1}" class="gallery-image">`)
             .join('');
         
         const galleryImages = gallery.querySelectorAll('.gallery-image');
         galleryImages.forEach(img => {
+            img.addEventListener('error', () => {
+                img.src = 'img/wirepas_sequence.svg';
+            }, { once: true });
+
             img.addEventListener('click', (e) => {
                 e.stopPropagation();
                 this.openFullscreen(img.src, project.title);
@@ -184,8 +189,9 @@ class ProjectsSystem {
         this.modal.classList.remove('active');
         
         setTimeout(() => {
-            document.body.style.overflow = '';
-            window.scrollTo(0, this.scrollPosition);
+            document.body.classList.remove('modal-open');
+            document.body.style.top = '';
+            window.scrollTo(0, this.scrollPosition || 0);
         }, 500);
     }
 
