@@ -179,7 +179,7 @@ class ProjectsSystem {
                 if (img.dataset.fallbackApplied === 'true') return;
                 img.dataset.fallbackApplied = 'true';
                 img.src = this.defaultFallbackImage;
-            }, { once: true });
+            });
 
             img.addEventListener('click', (e) => {
                 e.stopPropagation();
