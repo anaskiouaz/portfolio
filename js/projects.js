@@ -5,7 +5,7 @@ class ProjectsSystem {
                 title: 'IA Wirepas France',
                 category: 'Intelligence Artificielle',
                 year: '2026',
-                images: ['img/wirepas_sequence.svg', 'img/wirepas_sequence.svg'],
+                images: ['img/wirepas_sequence.svg', 'img/wirepas_arch_placeholder.svg'],
                 tech: ['OpenRouter', 'Claude 4.5', 'Streamlit', 'Python', 'Scrapling', 'HubSpot'],
                 context: 'Développement d\'une application (Web/Desktop) durant mon stage chez Wirepas France visant à automatiser la détection et la recommandation de prospects pour les salons professionnels. Le système utilise des pipelines de données complexes intégrant du scraping avancé et des modèles d\'IA de pointe.',
                 role: 'Conception de l\'architecture logicielle, implémentation des pipelines de traitement (scraping, enrichissement via APIs, routage IA via OpenRouter) et création du dashboard de visualisation sous Streamlit.',
@@ -175,6 +175,8 @@ class ProjectsSystem {
         const galleryImages = gallery.querySelectorAll('.gallery-image');
         galleryImages.forEach(img => {
             img.addEventListener('error', () => {
+                if (img.dataset.fallbackApplied === 'true') return;
+                img.dataset.fallbackApplied = 'true';
                 img.src = 'img/wirepas_sequence.svg';
             }, { once: true });
 
