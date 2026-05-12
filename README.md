@@ -39,20 +39,26 @@ open index.html
 **Période :** 20 Avril 2026 – 26 Juin 2026
 
 **Missions :**
-- Création d'une application (Web/Desktop) intégrant de l'IA pour détecter et recommander des prospects lors de salons professionnels.
-- Traitement de données : import et standardisation de données hétérogènes (CSV, PDF, Web) et enrichissement automatisé (secteur, technologies).
-- Développement UI & Data : dashboard de visualisation des prospects prioritaires, avec tests fonctionnels.
+- **Création d'une application (Web/Desktop)** intégrant l'IA pour la détection et la recommandation de prospects sur les salons professionnels.
+- **Traitement de données** : Import et standardisation de données hétérogènes (CSV, PDF, Web) et enrichissement automatisé (secteur, technos).
+- **Développement UI & Data** : Création d'un tableau de bord de visualisation des prospects prioritaires et tests fonctionnels.
 
 **Compétences développées :**
-- Optimisation algorithmique, intégration de modèles d'IA, gestion de bases de données, cycle de vie logiciel (spécifications, développement, tests).
+- Optimisation algorithmique, intégration de modèles d'Intelligence Artificielle, gestion de bases de données, cycle de vie logiciel (spécifications, dev, tests).
 
-**Aperçu technique :**
-- Architecture en pipelines connectés à un dashboard, avec intégration potentielle au Wirepas Developer Portal.
-- Stack : Scrapling, Crawl4AI, Playwright (scraping) • Clearbit, API recherche-entreprises (enrichissement) • Routage IA via OpenRouter (Claude Sonnet 4.5, Kimi K2, GPT-4o-mini) • Dév. agents via OpenCode • Front : Streamlit/React/Vue • DB : CSV, SQLite • CRM : HubSpot API.
+**Spécifications Techniques et Architecture :**
+- **Architecture logicielle** : Pipelines de traitement de données (scraping → enrichissement → IA → CRM) connectés à un dashboard. Intégration potentielle au *Wirepas Developer Portal*.
+- **Stack technique** :
+  - **Scraping** : Scrapling, Crawl4AI, Playwright.
+  - **Enrichissement** : Clearbit, API (recherche-entreprises.api.gouv.fr).
+  - **IA** : Routage via **OpenRouter** (Claude Sonnet 4.5, Kimi K2, GPT-4o-mini). Utilisation d'**OpenCode** (CLI agentique) pour l'itération sur les prompts.
+  - **Interface** : **Streamlit** (prototypage rapide) avec évolution prévue vers React/Vue.
+  - **Base de données** : CSV ou SQLite.
+  - **CRM** : HubSpot API.
 
-**Images, diagrammes & screenshots à ajouter ici :**
+**Aperçu & Visuels :**
 
-_→ Dépose tes diagrammes de séquence et visuels d’interface dans `/img/` puis ajoute-les ici sous forme de liens ou d’images._
+*(Espace réservé pour images, diagrammes de séquence et captures d'écran de l'interface)*
 
 ---
 
