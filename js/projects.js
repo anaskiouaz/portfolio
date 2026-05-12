@@ -1,14 +1,24 @@
 class ProjectsSystem {
     constructor() {
         this.projectData = {
+            wirepas: {
+                title: 'IA Wirepas France',
+                category: 'Intelligence Artificielle',
+                year: '2026',
+                images: ['img/wirepas_dashboard.png', 'img/wirepas_arch.png'], // À ajouter par l'utilisateur
+                tech: ['OpenRouter', 'Claude 4.5', 'Streamlit', 'Python', 'Scrapling', 'HubSpot'],
+                context: 'Développement d\'une application (Web/Desktop) durant mon stage chez Wirepas France visant à automatiser la détection et la recommandation de prospects pour les salons professionnels. Le système utilise des pipelines de données complexes intégrant du scraping avancé et des modèles d\'IA de pointe.',
+                role: 'Conception de l\'architecture logicielle, implémentation des pipelines de traitement (scraping, enrichissement via APIs, routage IA via OpenRouter) et création du dashboard de visualisation sous Streamlit.',
+                github: 'https://github.com/anaskiouaz/portfolio'
+            },
             ml: {
                 title: 'Classification de Dépêches',
                 category: 'Machine Learning',
                 year: '2025',
                 images: ['img/ML1.png', 'img/ML1.png', 'img/ML1.png'],
                 tech: ['Java', 'NLP', 'TF-IDF', 'KNN', 'Machine Learning'],
-                context: 'Développement d\'un système de classification automatique d\'articles de presse utilisant des techniques de traitement du langage naturel. Le projet implémente une approche hybride combinant l\'analyse lexicale et l\'algorithme des k plus proches voisins pour obtenir une précision optimale.',
-                role: 'Conception complète de l\'architecture du système, implémentation de l\'algorithme TF-IDF pour la vectorisation des textes, optimisation des hyperparamètres KNN, et développement de l\'interface de test. Réalisation d\'une analyse comparative de performances avec différents modèles.',
+                context: 'Développement d\'un système de classification automatique d\'articles de presse utilisant des techniques de traitement du langage naturel. Le projet implémente une approche par sacs de mots.',
+                role: 'Conception complète de l\'architecture du système, implémentation de l\'algorithme TF-IDF pour la vectorisation des textes, optimisation des hyperparamètres KNN.',
                 github: 'https://github.com/Jolly-Ak/News-Classification-ML'
             },
             cnn: {
@@ -17,8 +27,8 @@ class ProjectsSystem {
                 year: '2024',
                 images: ['img/1745556736982.jpg', 'img/1745556736982.jpg'],
                 tech: ['Python', 'TensorFlow', 'Keras', 'CNN', 'Data Augmentation', 'NumPy'],
-                context: 'Implémentation d\'un réseau de neurones convolutifs profond pour la classification d\'images. Le projet inclut un pipeline complet de prétraitement des données, data augmentation, entraînement du modèle avec early stopping, et évaluation des performances sur un ensemble de validation.',
-                role: 'Design de l\'architecture du réseau neuronal avec multiples couches convolutives et pooling, mise en place de techniques de régularisation (dropout, batch normalization), optimisation des hyperparamètres, et création d\'un système de visualisation des prédictions et des performances du modèle.',
+                context: 'Implémentation d\'un réseau de neurones convolutifs profond pour la classification d\'images. Le projet inclut un pipeline complet de prétraitement des données.',
+                role: 'Design de l\'architecture du réseau neuronal avec multiples couches convolutives et pooling, mise en place de techniques de régularisation.',
                 github: 'https://github.com/Jolly-Ak/Valorant-Kill-Detection'
             },
             javafx: {
@@ -27,8 +37,8 @@ class ProjectsSystem {
                 year: '2025',
                 images: ['img/JavaFX.png', 'img/JavaFX.png'],
                 tech: ['Java', 'JavaFX', 'MySQL', 'MVC', 'JDBC', 'Scene Builder'],
-                context: 'Application de gestion complète pour événements sportifs développée dans le cadre d\'un projet universitaire. L\'application permet la gestion des participants, des résultats, de la logistique et génère automatiquement les rapports et statistiques de l\'événement.',
-                role: 'Architecture complète en pattern MVC, développement de l\'interface utilisateur moderne avec JavaFX et CSS, conception et implémentation de la base de données MySQL avec relations complexes, création du système CRUD complet, et mise en place de tests unitaires pour les composants critiques.',
+                context: 'Application de gestion complète pour événements sportifs développée dans le cadre d\'un projet universitaire. L\'application permet la gestion des participants et des épreuves.',
+                role: 'Architecture complète en pattern MVC, développement de l\'interface utilisateur moderne avec JavaFX et CSS, conception de la base de données MySQL.',
                 github: 'https://gricad-gitlab.univ-grenoble-alpes.fr/iut2-info-stud/2025-s2/r2.01.03/d2/kiouazan'
             },
             web: {
@@ -37,8 +47,8 @@ class ProjectsSystem {
                 year: '2024',
                 images: ['img/Hardis.png', 'img/Hardis.png'],
                 tech: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'Responsive Design', 'Git'],
-                context: 'Création d\'un site web institutionnel éducatif présentant l\'entreprise Hardis Group et sa démarche de transition écologique. Le site est conçu pour être accessible à un jeune public tout en maintenant un niveau professionnel d\'information et de design.',
-                role: 'Développement frontend complet avec HTML5/CSS3, implémentation de l\'interactivité JavaScript, création d\'un design responsive mobile-first, intégration de formulaires de contact avec validation PHP, optimisation des performances et SEO, et déploiement sur serveur web.',
+                context: 'Création d\'un site web institutionnel éducatif présentant l\'entreprise Hardis Group et sa démarche de transition écologique.',
+                role: 'Développement frontend complet avec HTML5/CSS3, implémentation de l\'interactivité JavaScript, création d\'un design responsive mobile-first.',
                 github: 'https://github.com/Jolly-Ak/Hardis-Group'
             },
             game: {
@@ -47,22 +57,20 @@ class ProjectsSystem {
                 year: '2023',
                 images: ['img/sortgame.png', 'img/sortgame.png'],
                 tech: ['Python', 'Tkinter', 'POO', 'Algorithmes', 'Event-Driven'],
-                context: 'Jeu de réflexion et de stratégie développé en Python utilisant la bibliothèque Tkinter pour l\'interface graphique. Le jeu propose des défis de tri et de résolution de puzzles avec différents niveaux de difficulté et un système de scores.',
-                role: 'Conception de la logique du jeu en programmation orientée objet, développement de l\'interface graphique interactive avec Tkinter, implémentation du système de gestion des niveaux et des scores, création d\'algorithmes de génération de puzzles, et mise en place d\'un système de sauvegarde des progressions.',
+                context: 'Jeu de réflexion et de stratégie développé en Python utilisant la bibliothèque Tkinter pour l\'interface graphique.',
+                role: 'Conception de la logique du jeu en programmation orientée objet, développement de l\'interface graphique interactive avec Tkinter.',
                 github: 'https://github.com/Jolly-Ak/SortGame'
             },
             weave: {
                 title: 'Weave - Plateforme de Soins',
                 category: 'Full Stack Web & Mobile',
                 year: '2025',
-                // Assure-toi que ces images sont bien dans ton dossier img/
                 images: ['img/weave_dashboard.png', 'img/weave_arch.png', 'img/weave_cicd.png'],
                 tech: ['React', 'Node.js', 'PostgreSQL', 'Docker', 'Azure', 'Socket.IO', 'CI/CD'],
-                context: 'Face au vieillissement de la population, Weave centralise la coordination du maintien à domicile. C\'est une plateforme collaborative (Web & Mobile) qui connecte aidants, familles et bénévoles autour d\'un agenda partagé, d\'un système d\'incidents temps réel et d\'une messagerie sécurisée, remplaçant les échanges fragmentés par une solution structurée.',
-                role: 'Founder & Lead Developer. Conception de l\'architecture micro-services et de la base de données PostgreSQL. Mise en place du pipeline CI/CD (GitHub Actions -> Azure). Développement du backend (Express/Socket.IO) et de la logique de synchronisation temps réel. Coordination de l\'équipe mobile (React Native/Capacitor).',
+                context: 'Face au vieillissement de la population, Weave centralise la coordination du maintien à domicile. C\'est une plateforme collaborative qui connecte aidants et seniors.',
+                role: 'Founder & Lead Developer. Conception de l\'architecture micro-services et de la base de données PostgreSQL.',
                 github: 'https://github.com/anaskiouaz/WEAVE'
-        },
-            
+            }
         };
         
         this.modal = null;
