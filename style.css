@@ -726,7 +726,6 @@ a {
     overflow-y: auto;
     min-height: 0;
     min-width: 0;
-    -webkit-overflow-scrolling: touch;
 }
 
 .modal-right {
@@ -735,7 +734,6 @@ a {
     overflow-y: auto;
     min-height: 0;
     min-width: 0;
-    -webkit-overflow-scrolling: touch;
 }
 
 .modal-close-btn,
@@ -1078,7 +1076,6 @@ a {
     .modal-container {
         grid-template-columns: 1fr;
         overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
     }
 
     .modal-left,
