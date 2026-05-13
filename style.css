@@ -724,12 +724,18 @@ a {
     display: grid;
     gap: 1.5rem;
     overflow-y: auto;
+    min-height: 0;
+    min-width: 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal-right {
     background: var(--bg-card);
     padding: 2rem;
     overflow-y: auto;
+    min-height: 0;
+    min-width: 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal-close-btn,
@@ -1071,6 +1077,13 @@ a {
 
     .modal-container {
         grid-template-columns: 1fr;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .modal-left,
+    .modal-right {
+        overflow: visible;
     }
 }
 
