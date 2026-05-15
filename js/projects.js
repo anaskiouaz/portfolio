@@ -43,12 +43,12 @@ class ProjectsSystem {
             },
             web: {
                 title: 'Site Hardis Group',
-                category: 'Développement Web',
+                category: 'Prototype Web',
                 year: '2024',
                 images: ['img/Hardis.png', 'img/Hardis.png'],
-                tech: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'Responsive Design', 'Git'],
-                context: 'Création d\'un site web institutionnel éducatif présentant l\'entreprise Hardis Group et sa démarche de transition écologique.',
-                role: 'Développement frontend complet avec HTML5/CSS3, implémentation de l\'interactivité JavaScript, création d\'un design responsive mobile-first.',
+                tech: ['HTML5', 'UI Design', 'Responsive', 'JavaScript', 'Git'],
+                context: 'Création d\'un prototype d\'interface présentant l\'entreprise Hardis Group et sa démarche de transition écologique.',
+                role: 'Développement frontend et mise en place d\'interactions UI, avec un design responsive mobile-first.',
                 github: 'https://github.com/Jolly-Ak/Hardis-Group'
             },
             game: {
@@ -63,12 +63,12 @@ class ProjectsSystem {
             },
             weave: {
                 title: 'Weave - Plateforme de Soins',
-                category: 'Full Stack Web & Mobile',
+                category: 'Produit logiciel & Data',
                 year: '2025',
                 images: ['img/weave_dashboard.png', 'img/weave_arch.png', 'img/weave_cicd.png'],
-                tech: ['React', 'Node.js', 'PostgreSQL', 'Docker', 'Azure', 'Socket.IO', 'CI/CD'],
-                context: 'Face au vieillissement de la population, Weave centralise la coordination du maintien à domicile. C\'est une plateforme collaborative qui connecte aidants et seniors.',
-                role: 'Founder & Lead Developer. Conception de l\'architecture micro-services et de la base de données PostgreSQL.',
+                tech: ['Architecture logicielle', 'PostgreSQL', 'Docker', 'API temps réel', 'CI/CD', 'Azure'],
+                context: 'Face au vieillissement de la population, Weave centralise la coordination du maintien à domicile avec un focus sur les flux de données et la fiabilité opérationnelle.',
+                role: 'Founder & Lead Developer. Conception de l\'architecture logicielle, modélisation des données et orchestration des services.',
                 github: 'https://github.com/anaskiouaz/WEAVE'
             }
         };
