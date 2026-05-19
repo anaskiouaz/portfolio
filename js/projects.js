@@ -4,7 +4,7 @@ class ProjectsSystem {
             wirepas: {
                 title: 'ExpoMiner - Plateforme IA Wirepas',
                 category: 'Architecture Logicielle & IA',
-                year: '2026',
+                year: '2027',
                 images: ['img/wirepas_sequence.svg', 'img/wirepas_arch_placeholder.svg'],
                 tech: ['Node.js 20', 'TypeScript', 'Express.js', 'SQLite', 'Prisma ORM', 'Playwright', 'React', 'Tailwind', 'OpenCode API', 'APIs Externes (SIRENE/INPI/GLEIF)', 'HubSpot', 'NLP', 'LLM'],
                 context: 'Développement d\'une plateforme complète (Web + Backend) pour automatiser la qualification de prospects B2B lors de 12+ salons professionnels/an. ExpoMiner réduit le temps de préparation de 3 jours à <30min via scraping intelligent, enrichissement multi-source et scoring IA. Contexte: Wirepas participe à des salons (Electronica, Smart City Expo, IBS, Enlit) pour identifier prospects IoT industriel, avec processus préalablement entièrement manuel (3j/salon = perte 36j commerciaux/an).',
