@@ -207,33 +207,6 @@ class LanguageSwitcher {
         const current = i18n.getCurrentLanguage();
         toggle.querySelector('.lang-text').textContent = current === 'fr' ? 'EN' : 'FR';
     }
-
-    updateProjectCardTitles() {
-        const lang = i18n.getCurrentLanguage();
-        document.querySelectorAll('.project-card').forEach(card => {
-            const projectId = card.dataset.projectId;
-            const projectsSystem = window.projectsSystem;
-            if (!projectsSystem) return;
-            
-            const project = projectsSystem.projectData[projectId];
-            
-            if (project) {
-                const titleEl = card.querySelector('.project-title');
-                const categoryEl = card.querySelector('.project-category');
-                const descEl = card.querySelector('.project-description');
-                
-                if (titleEl && project.title) {
-                    titleEl.textContent = typeof project.title === 'object' ? project.title[lang] : project.title;
-                }
-                if (categoryEl && project.category) {
-                    categoryEl.textContent = typeof project.category === 'object' ? project.category[lang] : project.category;
-                }
-                if (descEl && project.description) {
-                    descEl.textContent = typeof project.description === 'object' ? project.description[lang] : project.description;
-                }
-            }
-        });
-    }
 }
 
 // === INITIALIZE ===
