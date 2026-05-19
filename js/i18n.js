@@ -325,9 +325,8 @@ class I18n {
             return saved;
         }
 
-        // Detect based on browser language
-        // Browser language setting is a reliable indicator of user location/preference
-        // Alternative: Use IP-based geolocation API for more precise location detection
+        // Detect based on browser language setting
+        // This is a reliable indicator of user's preferred language/locale
         const browserLang = navigator.language || navigator.userLanguage;
         if (browserLang.startsWith('fr')) {
             return 'fr';

@@ -192,7 +192,7 @@ class LanguageSwitcher {
         // Listen for language changes from i18n
         window.addEventListener('languageChanged', () => {
             this.updateToggleText();
-            this.updateProjectCardTitles();
+            // ProjectsSystem handles updating project card titles
         });
     }
 
