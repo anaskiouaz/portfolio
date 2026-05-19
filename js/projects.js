@@ -2,13 +2,13 @@ class ProjectsSystem {
     constructor() {
         this.projectData = {
             wirepas: {
-                title: 'IA Wirepas France',
-                category: 'Intelligence Artificielle',
+                title: 'ExpoMiner - Plateforme IA Wirepas',
+                category: 'Architecture Logicielle & IA',
                 year: '2026',
                 images: ['img/wirepas_sequence.svg', 'img/wirepas_arch_placeholder.svg'],
-                tech: ['OpenRouter', 'Claude 4.5', 'Streamlit', 'Python', 'Scraping', 'HubSpot'],
-                context: 'Développement d\'une application (Web/Desktop) durant mon stage chez Wirepas France visant à automatiser la détection et la recommandation de prospects pour les salons professionnels. Le système utilise des pipelines de données complexes intégrant du scraping avancé et des modèles d\'IA de pointe.',
-                role: 'Conception de l\'architecture logicielle complet, implémentation des pipelines de traitement end-to-end (scraping avancé, enrichissement via APIs externes, intégration CRM HubSpot, routage IA via OpenRouter). Création du dashboard interactif Streamlit avec visualisation temps réel et exports de données. Résultats: automatisation de 80% du processus de qualification des prospects, réduction du temps d\'analyse de 10h à 30min par événement.',
+                tech: ['Node.js 20', 'TypeScript', 'Express.js', 'SQLite', 'Prisma ORM', 'Playwright', 'React', 'Tailwind', 'OpenCode API', 'APIs Externes (SIRENE/INPI/GLEIF)', 'HubSpot', 'NLP', 'LLM'],
+                context: 'Développement d\'une plateforme complète (Web + Backend) pour automatiser la qualification de prospects B2B lors de 12+ salons professionnels/an. ExpoMiner réduit le temps de préparation de 3 jours à <30min via scraping intelligent, enrichissement multi-source et scoring IA. Contexte: Wirepas participe à des salons (Electronica, Smart City Expo, IBS, Enlit) pour identifier prospects IoT industriel, avec processus préalablement entièrement manuel (3j/salon = perte 36j commerciaux/an).',
+                role: 'Lead Developer & Architect. Conception complète de l\'architecture monorepo TypeScript (Backend Node.js + Frontend React). Orchestration du pipeline end-to-end: (1) Scraping multi-site via Playwright + détection heuristique des sélecteurs CSS, (2) Enrichissement via 8+ APIs (SIRENE/INPI/GLEIF/Wikidata/VIES/Pappers), (3) NLP local (TF-IDF + Embeddings MiniLM-L12-v2), (4) Scoring via LLM minimax-m2.5-free, (5) Intégration HubSpot automatisée. Implémentation infrastructure Docker + CI/CD GitHub Actions. Défis surmontés: pagination dynamique (scroll infini), extraction PDF avec reconnaissance technologique (DDG Lite + pdf-parse), déduplication multi-critères, optimisation NLP local pour <50ms/query, gestion erreurs APIs tierces. Résultats: automatisation 85% processus qualification, réduction temps 10h→30min/salon (97% gain), pipeline robuste 12+ salons/an, dashboard temps-réel avec exports HubSpot, couverture tests Vitest.',
                 github: 'https://github.com/anaskiouaz/wirepas-ia-platform'
             },
             ml: {
