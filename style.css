@@ -1096,6 +1096,38 @@ a {
     }
 }
 
+/* === LANGUAGE SWITCHER === */
+.language-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.lang-toggle {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-smooth);
+    font-family: var(--font-body);
+}
+
+.lang-toggle:hover {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.lang-text {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none;

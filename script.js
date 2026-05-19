@@ -168,7 +168,77 @@ class PortfolioUI {
     }
 }
 
+// ============================================
+// LANGUAGE SWITCHER FUNCTIONALITY
+// ============================================
+
+class LanguageSwitcher {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        const langToggle = document.getElementById('langToggle');
+        if (!langToggle) return;
+
+        // Set initial text
+        this.updateToggleText();
+
+        // Add click listener
+        langToggle.addEventListener('click', () => {
+            this.toggleLanguage();
+        });
+
+        // Listen for language changes from i18n
+        window.addEventListener('languageChanged', () => {
+            this.updateToggleText();
+            this.updateProjectCardTitles();
+        });
+    }
+
+    toggleLanguage() {
+        const current = i18n.getCurrentLanguage();
+        const newLang = current === 'fr' ? 'en' : 'fr';
+        i18n.setLanguage(newLang);
+    }
+
+    updateToggleText() {
+        const toggle = document.getElementById('langToggle');
+        const current = i18n.getCurrentLanguage();
+        toggle.querySelector('.lang-text').textContent = current === 'fr' ? 'EN' : 'FR';
+    }
+
+    updateProjectCardTitles() {
+        const lang = i18n.getCurrentLanguage();
+        document.querySelectorAll('.project-card').forEach(card => {
+            const projectId = card.dataset.projectId;
+            const projectsSystem = window.projectsSystem;
+            if (!projectsSystem) return;
+            
+            const project = projectsSystem.projectData[projectId];
+            
+            if (project) {
+                const titleEl = card.querySelector('.project-title');
+                const categoryEl = card.querySelector('.project-category');
+                const descEl = card.querySelector('.project-description');
+                
+                if (titleEl && project.title) {
+                    titleEl.textContent = typeof project.title === 'object' ? project.title[lang] : project.title;
+                }
+                if (categoryEl && project.category) {
+                    categoryEl.textContent = typeof project.category === 'object' ? project.category[lang] : project.category;
+                }
+                if (descEl && project.description) {
+                    descEl.textContent = typeof project.description === 'object' ? project.description[lang] : project.description;
+                }
+            }
+        });
+    }
+}
+
 // === INITIALIZE ===
 document.addEventListener('DOMContentLoaded', () => {
     new PortfolioUI();
+    new LanguageSwitcher();
 });
+
