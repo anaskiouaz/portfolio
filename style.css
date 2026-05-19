@@ -718,8 +718,7 @@ a {
 .modal-container {
     width: min(1100px, 92vw);
     max-height: 88vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     background: var(--bg-secondary);
     border: 1px solid var(--border);
     border-radius: 24px;
@@ -733,6 +732,7 @@ a {
     display: grid;
     gap: 1.5rem;
     overflow-y: auto;
+    max-height: 88vh;
     min-height: 0;
     min-width: 0;
 }
@@ -741,6 +741,7 @@ a {
     background: var(--bg-card);
     padding: 2rem;
     overflow-y: auto;
+    max-height: 88vh;
     min-height: 0;
     min-width: 0;
 }
@@ -1085,11 +1086,13 @@ a {
     .modal-container {
         grid-template-columns: 1fr;
         overflow-y: auto;
+        max-height: 88vh;
     }
 
     .modal-left,
     .modal-right {
         overflow: visible;
+        max-height: none;
     }
 }
 
