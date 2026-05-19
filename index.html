@@ -19,15 +19,21 @@
             </div>
             
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link" data-text="Accueil">Accueil</a></li>
-                <li><a href="#about" class="nav-link" data-text="Parcours">Parcours</a></li>
-                <li><a href="#projects" class="nav-link" data-text="Projets">Projets</a></li>
-                <li><a href="#skills" class="nav-link" data-text="Expertise">Expertise</a></li>
-                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">Parcours</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Expertise</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
+
+            <div class="language-switcher">
+                <button id="langToggle" class="lang-toggle" title="Toggle language">
+                    <span class="lang-text">EN</span>
+                </button>
+            </div>
             
             <a href="cv/CV anas.pdf" target="_blank" class="cta-nav">
-                <span>Curriculum</span>
+                <span data-i18n="nav.cv">Curriculum</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M1 15L15 1M15 1H5M15 1V11" stroke="currentColor" stroke-width="2"/>
                 </svg>
@@ -41,7 +47,7 @@
             <div class="hero-content">
                 <div class="hero-eyebrow" data-scroll-reveal>
                     <span class="status-dot"></span>
-                    <span>Disponible pour alternance Septembre 2027</span>
+                    <span data-i18n="hero.status">Disponible pour alternance Septembre 2027</span>
                 </div>
                 
                 <h1 class="hero-title" data-scroll-reveal>
@@ -50,11 +56,11 @@
                 </h1>
                 
                 <div class="hero-subtitle" data-scroll-reveal>
-                    <p class="subtitle-large">Développeur IA, Data & Applications</p>
-                    <p class="subtitle-location">Basé à Grenoble, France</p>
+                    <p class="subtitle-large" data-i18n="hero.role">Développeur IA, Data & Applications</p>
+                    <p class="subtitle-location" data-i18n="hero.location">Basé à Grenoble, France</p>
                 </div>
                 
-                <p class="hero-description" data-scroll-reveal>
+                <p class="hero-description" data-scroll-reveal data-i18n="hero.description">
                     Passionné par l'ingénierie IA, l'analyse de données et le développement d'applications performantes. 
                     Actuellement en 2ᵉ année de BUT Informatique à l'IUT2, 
                     je me spécialise dans des solutions <span class="text-accent">data-driven</span> et des systèmes intelligents.
@@ -62,28 +68,28 @@
                 
                 <div class="hero-actions" data-scroll-reveal>
                     <a href="#projects" class="btn-primary">
-                        <span>Découvrir mes projets</span>
+                        <span data-i18n="hero.btn-projects">Découvrir mes projets</span>
                         <div class="btn-glow"></div>
                     </a>
                     <a href="#contact" class="btn-secondary">
-                        <span>Entrer en contact</span>
+                        <span data-i18n="hero.btn-contact">Entrer en contact</span>
                     </a>
                 </div>
                 
                 <div class="hero-stats" data-scroll-reveal>
                     <div class="stat-item">
                         <span class="stat-number">6+</span>
-                        <span class="stat-label">Projets Réalisés</span>
+                        <span class="stat-label" data-i18n="hero.stat-projects">Projets Réalisés</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <span class="stat-number">2027</span>
-                        <span class="stat-label">Diplôme BUT</span>
+                        <span class="stat-label" data-i18n="hero.stat-diploma">Diplôme BUT</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <span class="stat-number">20</span>
-                        <span class="stat-label">Ans</span>
+                        <span class="stat-label" data-i18n="hero.stat-age">Ans</span>
                     </div>
                 </div>
             </div>
@@ -99,16 +105,16 @@
                     </div>
                     <div class="profile-metrics">
                         <div class="profile-metric">
-                            <span class="metric-label">Spécialité</span>
-                            <span class="metric-value">IA appliquée & Data</span>
+                            <span class="metric-label" data-i18n="profile.specialty">Spécialité</span>
+                            <span class="metric-value" data-i18n="profile.specialty-value">IA appliquée & Data</span>
                         </div>
                         <div class="profile-metric">
-                            <span class="metric-label">Localisation</span>
-                            <span class="metric-value">Grenoble, France</span>
+                            <span class="metric-label" data-i18n="profile.location-label">Localisation</span>
+                            <span class="metric-value" data-i18n="profile.location-value">Grenoble, France</span>
                         </div>
                         <div class="profile-metric">
-                            <span class="metric-label">Disponibilité</span>
-                            <span class="metric-value">Alternance 2027</span>
+                            <span class="metric-label" data-i18n="profile.availability">Disponibilité</span>
+                            <span class="metric-value" data-i18n="profile.availability-value">Alternance 2027</span>
                         </div>
                     </div>
                     <div class="profile-tags">
@@ -118,18 +124,18 @@
                         <span>IA</span>
                         <span>Data</span>
                     </div>
-                    <a href="#contact" class="btn-tertiary">Planifier un échange</a>
+                    <a href="#contact" class="btn-tertiary" data-i18n="hero.schedule">Planifier un échange</a>
                 </div>
                 <div class="profile-highlight" data-scroll-reveal>
-                    <p class="highlight-label">Focus 2027</p>
-                    <p class="highlight-value">Concevoir des systèmes IA & data robustes.</p>
-                    <p class="highlight-note">Ouvert aux missions IA, data et logiciels exigeants.</p>
+                    <p class="highlight-label" data-i18n="hero.focus">Focus 2027</p>
+                    <p class="highlight-value" data-i18n="hero.focus-title">Concevoir des systèmes IA & data robustes.</p>
+                    <p class="highlight-note" data-i18n="hero.focus-note">Ouvert aux missions IA, data et logiciels exigeants.</p>
                 </div>
             </div>
         </div>
         
         <div class="scroll-indicator">
-            <span>Défiler</span>
+            <span data-i18n="hero.scroll">Défiler</span>
             <div class="scroll-line"></div>
         </div>
     </section>
@@ -138,14 +144,14 @@
         <div class="container-fluid">
             <div class="section-header" data-scroll-reveal>
                 <span class="section-number">01</span>
-                <h2 class="section-title-large">Mon Parcours</h2>
+                <h2 class="section-title-large" data-i18n="about.title">Mon Parcours</h2>
             </div>
             
             <div class="about-grid">
                 <div class="about-story" data-scroll-reveal>
                     <div class="story-block">
-                        <h3 class="story-title">Développeur en Formation</h3>
-                        <p>
+                        <h3 class="story-title" data-i18n="about.student">Développeur en Formation</h3>
+                        <p data-i18n="about.bio1">
                             Étudiant de 20 ans en troisième année de BUT <strong>Informatique</strong> à l'IUT2 de Grenoble, 
                             titulaire d'un baccalauréat scientifique mention <strong>Bien</strong>. 
                             Je me forme en développement <strong>logiciel</strong>, intelligence <strong>artificielle</strong> 
@@ -154,7 +160,7 @@
                     </div>
                     
                     <div class="story-block">
-                        <p>
+                        <p data-i18n="about.bio2">
                             Mon parcours m'a permis d'acquérir des compétences en <strong>programmation</strong>, 
                             notamment en <strong>Python</strong>, <strong>Java</strong> et <strong>C++</strong>, ainsi que des bases en 
                             machine <strong>learning</strong>, analyse de <strong>données</strong> et développement d'<strong>applications</strong>.
@@ -162,7 +168,7 @@
                     </div>
                     
                     <div class="story-block">
-                        <p>
+                        <p data-i18n="about.bio3">
                             Je cherche à résoudre des problématiques <strong>réelles</strong> tout en continuant 
                             d'<strong>apprendre</strong> et en développant mon <strong>autonomie</strong> et mon 
                             esprit de <strong>collaboration</strong>.
@@ -173,20 +179,20 @@
                 <div class="about-details" data-scroll-reveal>
                     <div class="details-card">
                         <div class="detail-row">
-                            <span class="detail-label">Âge</span>
-                            <span class="detail-value">20 ans</span>
+                            <span class="detail-label" data-i18n="about.age">Âge</span>
+                            <span class="detail-value" data-i18n="about.age-value">20 ans</span>
                         </div>
                         <div class="detail-row">
-                            <span class="detail-label">Localisation</span>
-                            <span class="detail-value">Saint-Martin-d'Hères, FR</span>
+                            <span class="detail-label" data-i18n="about.location">Localisation</span>
+                            <span class="detail-value" data-i18n="about.location-value">Saint-Martin-d'Hères, FR</span>
                         </div>
                         <div class="detail-row">
-                            <span class="detail-label">Formation</span>
-                            <span class="detail-value">BUT Informatique (IUT2)</span>
+                            <span class="detail-label" data-i18n="about.education">Formation</span>
+                            <span class="detail-value" data-i18n="about.education-value">BUT Informatique (IUT2)</span>
                         </div>
                         <div class="detail-row">
-                            <span class="detail-label">Disponibilité</span>
-                            <span class="detail-value">Alternance Septembre 2027</span>
+                            <span class="detail-label" data-i18n="about.availability-label">Disponibilité</span>
+                            <span class="detail-value" data-i18n="about.availability-value">Alternance Septembre 2027</span>
                         </div>
                     </div>
                 </div>
@@ -198,7 +204,7 @@
         <div class="container-fluid">
             <div class="section-header" data-scroll-reveal>
                 <span class="section-number">02</span>
-                <h2 class="section-title-large">Projets Sélectionnés</h2>
+                <h2 class="section-title-large" data-i18n="projects.title">Projets Sélectionnés</h2>
             </div>
             
             <div class="projects-grid">
@@ -376,11 +382,11 @@
                 <h2 class="modal-title"></h2>
                 <div class="modal-tech-stack"></div>
                 <div class="modal-section">
-                    <h3>Contexte</h3>
+                    <h3 data-i18n="projects.context">Contexte</h3>
                     <p class="modal-context"></p>
                 </div>
                 <div class="modal-section">
-                    <h3>Mon Rôle</h3>
+                    <h3 data-i18n="projects.role">Mon Rôle</h3>
                     <p class="modal-role"></p>
                 </div>
                 <div class="modal-actions">
@@ -388,7 +394,7 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                             <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.465-1.11-1.465 0 0 .332-.009.452-.003.533.028 1.03.227 1.45.57.345.282.61.64.774 1.05.352 1.15 1.152 1.45 1.552 1.45.4 0 .753-.05 1-.15.05-.4.25-.75.5-1-2.25-.25-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.25-.45-1.25.1-2.6 0 0 .85-.25 2.8 1.05.8-.25 1.65-.35 2.5-.35.85 0 1.7.1 2.5.35 1.95-1.3 2.8-1.05 2.8-1.05.55 1.35.2 2.35.1 2.6.6.7 1 1.6 1 2.7 0 3.85-2.25 4.65-4.5 4.9.35.3.65.9.65 1.8 0 1.3-.01 2.35-.01 2.65 0 .3.18.58.69.48C19.135 20.17 22 16.42 22 12c0-5.523-4.477-10-10-10z" fill="currentColor"/>
                         </svg>
-                        <span>Voir sur GitHub</span>
+                        <span data-i18n="projects.github">Voir sur GitHub</span>
                     </a>
                 </div>
             </div>
@@ -411,8 +417,8 @@
         <div class="container-fluid">
             <div class="section-header" data-scroll-reveal>
                 <span class="section-number">03</span>
-                <h2 class="section-title-large">Expertise Technique</h2>
-                <p class="section-subtitle">IA, data et développement d'applications</p>
+                <h2 class="section-title-large" data-i18n="skills.title">Expertise Technique</h2>
+                <p class="section-subtitle" data-i18n="skills.subtitle">IA, data et développement d'applications</p>
             </div>
             
             <div class="skills-grid">
@@ -568,19 +574,19 @@
             </div>
 
             <div class="languages-section" data-scroll-reveal>
-                <h3 class="subsection-title">Langues</h3>
+                <h3 class="subsection-title" data-i18n="skills.languages">Langues</h3>
                 <div class="languages-grid-new">
                     <div class="language-card-new" data-lang="french">
                         <div class="lang-flag-circle">🇫🇷</div>
-                        <h4 class="lang-name">Français</h4>
+                        <h4 class="lang-name" data-i18n="lang.french">Français</h4>
                         <div class="lang-level-bar">
                             <div class="lang-level-fill" data-level="100"></div>
                         </div>
-                        <span class="lang-label">Natif</span>
+                        <span class="lang-label" data-i18n="lang.native">Natif</span>
                     </div>
                     <div class="language-card-new" data-lang="english">
                         <div class="lang-flag-circle">🇬🇧</div>
-                        <h4 class="lang-name">Anglais</h4>
+                        <h4 class="lang-name" data-i18n="lang.english">Anglais</h4>
                         <div class="lang-level-bar">
                             <div class="lang-level-fill" data-level="85"></div>
                         </div>
@@ -588,7 +594,7 @@
                     </div>
                     <div class="language-card-new" data-lang="arabic">
                         <div class="lang-flag-circle">🇸🇦</div>
-                        <h4 class="lang-name">Arabe</h4>
+                        <h4 class="lang-name" data-i18n="lang.arabic">Arabe</h4>
                         <div class="lang-level-bar">
                             <div class="lang-level-fill" data-level="75"></div>
                         </div>
@@ -596,18 +602,18 @@
                     </div>
                     <div class="language-card-new" data-lang="italian">
                         <div class="lang-flag-circle">🇮🇹</div>
-                        <h4 class="lang-name">Italien</h4>
+                        <h4 class="lang-name" data-i18n="lang.italian">Italien</h4>
                         <div class="lang-level-bar">
                             <div class="lang-level-fill" data-level="30"></div>
                         </div>
-                        <span class="lang-label">Notions</span>
+                        <span class="lang-label" data-i18n="lang.italian-skills">Notions</span>
                     </div>
                 </div>
             </div>
             
             <div class="interests-section-new" data-scroll-reveal>
-                <h3 class="subsection-title">Centres d'Intérêt</h3>
-                <p class="interests-intro">Au-delà du code, ce qui me passionne</p>
+                <h3 class="subsection-title" data-i18n="interests.title">Centres d'Intérêt</h3>
+                <p class="interests-intro" data-i18n="interests.intro">Au-delà du code, ce qui me passionne</p>
                 
                 <div class="interests-showcase">
                     <div class="interest-card-new" data-interest="boxing">
@@ -615,8 +621,8 @@
                             <div class="interest-emoji">🥊</div>
                             <div class="interest-particles"></div>
                         </div>
-                        <h4>Boxe Compétition</h4>
-                        <p>Discipline, stratégie et dépassement de soi</p>
+                        <h4 data-i18n="interest.boxing">Boxe Compétition</h4>
+                        <p data-i18n="interest.boxing-desc">Discipline, stratégie et dépassement de soi</p>
                     </div>
 
                     <div class="interest-card-new" data-interest="swimming">
@@ -624,8 +630,8 @@
                             <div class="interest-emoji">🏊</div>
                             <div class="interest-particles"></div>
                         </div>
-                        <h4>Natation</h4>
-                        <p>Endurance et clarté mentale</p>
+                        <h4 data-i18n="interest.swimming">Natation</h4>
+                        <p data-i18n="interest.swimming-desc">Endurance et clarté mentale</p>
                     </div>
 
                     <div class="interest-card-new" data-interest="chess">
@@ -633,8 +639,8 @@
                             <div class="interest-emoji">♟️</div>
                             <div class="interest-particles"></div>
                         </div>
-                        <h4>Échecs</h4>
-                        <p>Tactique et anticipation</p>
+                        <h4 data-i18n="interest.chess">Échecs</h4>
+                        <p data-i18n="interest.chess-desc">Tactique et anticipation</p>
                     </div>
 
                     <div class="interest-card-new" data-interest="calisthenics">
@@ -642,8 +648,8 @@
                             <div class="interest-emoji">💪</div>
                             <div class="interest-particles"></div>
                         </div>
-                        <h4>Callisthénie</h4>
-                        <p>Force et contrôle du corps</p>
+                        <h4 data-i18n="interest.calisthenics">Callisthénie</h4>
+                        <p data-i18n="interest.calisthenics-desc">Force et contrôle du corps</p>
                     </div>
 
                     <div class="interest-card-new" data-interest="ultimate">
@@ -651,8 +657,8 @@
                             <div class="interest-emoji">🥏</div>
                             <div class="interest-particles"></div>
                         </div>
-                        <h4>Ultimate Frisbee</h4>
-                        <p>Esprit d'équipe et fair-play</p>
+                        <h4 data-i18n="interest.ultimate">Ultimate Frisbee</h4>
+                        <p data-i18n="interest.ultimate-desc">Esprit d'équipe et fair-play</p>
                     </div>
 
                     <div class="interest-card-new" data-interest="gaming">
@@ -660,8 +666,8 @@
                             <div class="interest-emoji">🎮</div>
                             <div class="interest-particles"></div>
                         </div>
-                        <h4>League of Legends</h4>
-                        <p>Stratégie en temps réel</p>
+                        <h4 data-i18n="interest.gaming">League of Legends</h4>
+                        <p data-i18n="interest.gaming-desc">Stratégie en temps réel</p>
                     </div>
                 </div>
             </div>
@@ -673,10 +679,10 @@
             <div class="footer-content">
                 <div class="footer-main">
                     <h2 class="footer-title" data-scroll-reveal>
-                        Travaillons<br>
-                        <span class="text-accent">Ensemble</span>
+                        <span data-i18n="footer.title">Travaillons</span><br>
+                        <span class="text-accent" data-i18n="footer.title-accent">Ensemble</span>
                     </h2>
-                    <p class="footer-description" data-scroll-reveal>
+                    <p class="footer-description" data-scroll-reveal data-i18n="footer.description">
                         Je suis disponible pour des stages, projets ou collaborations. 
                         N'hésitez pas à me contacter.
                     </p>
@@ -708,12 +714,13 @@
             </div>
             
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2026 Anas KIOUAZ. Tous droits réservés.</p>
-                <p class="footer-location">Grenoble, France</p>
+                <p class="footer-copyright" data-i18n="footer.copyright">© 2026 Anas KIOUAZ. Tous droits réservés.</p>
+                <p class="footer-location" data-i18n="footer.location">Grenoble, France</p>
             </div>
         </div>
     </footer>
     
+    <script src="js/i18n.js"></script>
     <script src="js/projects.js"></script>
     <script src="script.js"></script>
 </body>

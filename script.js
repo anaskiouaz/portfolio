@@ -168,7 +168,55 @@ class PortfolioUI {
     }
 }
 
+// ============================================
+// LANGUAGE SWITCHER FUNCTIONALITY
+// ============================================
+
+class LanguageSwitcher {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        const langToggle = document.getElementById('langToggle');
+        if (!langToggle) return;
+
+        // Set initial text
+        this.updateToggleText();
+
+        // Add click listener
+        langToggle.addEventListener('click', () => {
+            this.toggleLanguage();
+        });
+
+        // Listen for language changes from i18n
+        window.addEventListener('languageChanged', () => {
+            this.updateToggleText();
+            // ProjectsSystem handles updating project card titles
+        });
+    }
+
+    toggleLanguage() {
+        const current = i18n.getCurrentLanguage();
+        const newLang = current === 'fr' ? 'en' : 'fr';
+        i18n.setLanguage(newLang);
+    }
+
+    updateToggleText() {
+        const toggle = document.getElementById('langToggle');
+        if (!toggle) return;
+        
+        const langText = toggle.querySelector('.lang-text');
+        if (!langText) return;
+        
+        const current = i18n.getCurrentLanguage();
+        langText.textContent = current === 'fr' ? 'EN' : 'FR';
+    }
+}
+
 // === INITIALIZE ===
 document.addEventListener('DOMContentLoaded', () => {
     new PortfolioUI();
+    new LanguageSwitcher();
 });
+
