@@ -193,6 +193,11 @@ class ProjectsSystem {
         this.init();
     }
 
+    // Helper method to get translated values
+    getTranslatedValue(value, lang) {
+        return typeof value === 'object' ? value[lang] : value;
+    }
+
     init() {
         this.setupModal();
         this.setupFullscreenViewer();
@@ -271,13 +276,13 @@ class ProjectsSystem {
                 const descEl = card.querySelector('.project-description');
                 
                 if (titleEl && project.title) {
-                    titleEl.textContent = typeof project.title === 'object' ? project.title[lang] : project.title;
+                    titleEl.textContent = this.getTranslatedValue(project.title, lang);
                 }
                 if (categoryEl && project.category) {
-                    categoryEl.textContent = typeof project.category === 'object' ? project.category[lang] : project.category;
+                    categoryEl.textContent = this.getTranslatedValue(project.category, lang);
                 }
                 if (descEl && project.description) {
-                    descEl.textContent = typeof project.description === 'object' ? project.description[lang] : project.description;
+                    descEl.textContent = this.getTranslatedValue(project.description, lang);
                 }
             }
         });
@@ -312,18 +317,18 @@ class ProjectsSystem {
         
         const lang = i18n.getCurrentLanguage();
         
-        category.textContent = typeof project.category === 'object' ? project.category[lang] : project.category;
+        category.textContent = this.getTranslatedValue(project.category, lang);
         year.textContent = project.year;
-        title.textContent = typeof project.title === 'object' ? project.title[lang] : project.title;
-        context.textContent = typeof project.context === 'object' ? project.context[lang] : project.context;
-        role.textContent = typeof project.role === 'object' ? project.role[lang] : project.role;
+        title.textContent = this.getTranslatedValue(project.title, lang);
+        context.textContent = this.getTranslatedValue(project.context, lang);
+        role.textContent = this.getTranslatedValue(project.role, lang);
         githubLink.href = project.github;
         
         techStack.innerHTML = project.tech
             .map(tech => `<span>${tech}</span>`)
             .join('');
         
-        const projectTitle = typeof project.title === 'object' ? project.title[lang] : project.title;
+        const projectTitle = this.getTranslatedValue(project.title, lang);
         gallery.innerHTML = project.images
             .map((image, index) => `<img src="${image}" alt="${projectTitle} - visuel ${index + 1}" class="gallery-image">`)
             .join('');

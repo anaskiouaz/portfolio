@@ -204,8 +204,13 @@ class LanguageSwitcher {
 
     updateToggleText() {
         const toggle = document.getElementById('langToggle');
+        if (!toggle) return;
+        
+        const langText = toggle.querySelector('.lang-text');
+        if (!langText) return;
+        
         const current = i18n.getCurrentLanguage();
-        toggle.querySelector('.lang-text').textContent = current === 'fr' ? 'EN' : 'FR';
+        langText.textContent = current === 'fr' ? 'EN' : 'FR';
     }
 }
 
