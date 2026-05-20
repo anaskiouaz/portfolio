@@ -18,7 +18,7 @@ class I18n {
 
                 // Hero Section
                 'hero.status': 'Disponible pour alternance Septembre 2026',
-                'hero.rhythm': 'Rythme d\'alternance : 3 semaines entreprise / 1 semaine école',
+                'hero.rhythm': 'Rythme d\'alternance :',
                 'hero.rhythm-calendar': 'Voir le calendrier officiel BUT3',
                 'hero.role': 'Développeur logiciel — Backend, Data & IA',
                 'hero.location': 'Python · Java · Symfony · Docker — Étudiant BUT Informatique à Grenoble',
@@ -111,7 +111,7 @@ class I18n {
 
                 // Hero Section
                 'hero.status': 'Available for apprenticeship September 2026',
-                'hero.rhythm': 'Apprenticeship rhythm: 3 weeks company / 1 week school',
+                'hero.rhythm': 'Apprenticeship rhythm:',
                 'hero.rhythm-calendar': 'View official BUT3 calendar',
                 'hero.role': 'Software Developer — Backend, Data & AI',
                 'hero.location': 'Python · Java · Symfony · Docker — BUT Computer Science student in Grenoble',
