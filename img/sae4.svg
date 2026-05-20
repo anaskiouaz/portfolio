@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="sae4Title sae4Desc">
+  <title id="sae4Title">SAE 4 — Refonte qualité, conteneurisation Docker et tests E2E</title>
+  <desc id="sae4Desc">Schéma illustrant l'architecture Docker (PostgreSQL, PHP-FPM, Nginx), avec les chaînes d'outils de test Cypress et Espresso et le pilotage Linear/GitLab.</desc>
+  <defs>
+    <linearGradient id="sae4Bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#162032"/>
+    </linearGradient>
+    <linearGradient id="sae4Card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2a44"/>
+      <stop offset="100%" stop-color="#142036"/>
+    </linearGradient>
+    <linearGradient id="sae4Accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#sae4Bg)"/>
+
+  <text x="80" y="100" fill="#cbd5f5" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="600" letter-spacing="2">SAE S4 · GÉNIE LOGICIEL &amp; DEVOPS</text>
+  <text x="80" y="150" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="44" font-weight="700">Refonte qualité — Carnet de stage</text>
+  <text x="80" y="190" fill="#94a3b8" font-family="Inter, Segoe UI, sans-serif" font-size="22">Chef de projet · équipe de 6 · Docker · 3FN · Tests E2E</text>
+
+  <g transform="translate(80, 240)">
+    <rect width="320" height="180" rx="16" fill="url(#sae4Card)" stroke="#334155" stroke-width="2"/>
+    <text x="160" y="50" text-anchor="middle" fill="#60a5fa" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700">PostgreSQL 18</text>
+    <text x="160" y="85" text-anchor="middle" fill="#cbd5f5" font-family="Inter, Segoe UI, sans-serif" font-size="14">Schéma relationnel</text>
+    <text x="160" y="108" text-anchor="middle" fill="#cbd5f5" font-family="Inter, Segoe UI, sans-serif" font-size="14">en 3ᵉ forme normale</text>
+    <rect x="40" y="130" width="240" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+    <text x="160" y="150" text-anchor="middle" fill="#94a3b8" font-family="Fira Code, monospace" font-size="12">docker-compose up -d</text>
+  </g>
+
+  <g transform="translate(440, 240)">
+    <rect width="320" height="180" rx="16" fill="url(#sae4Card)" stroke="#334155" stroke-width="2"/>
+    <text x="160" y="50" text-anchor="middle" fill="#60a5fa" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700">PHP-FPM 8.4</text>
+    <text x="160" y="85" text-anchor="middle" fill="#cbd5f5" font-family="Inter, Segoe UI, sans-serif" font-size="14">Symfony 7 — API REST</text>
+    <text x="160" y="108" text-anchor="middle" fill="#cbd5f5" font-family="Inter, Segoe UI, sans-serif" font-size="14">Back-office administration</text>
+    <rect x="40" y="130" width="240" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+    <text x="160" y="150" text-anchor="middle" fill="#94a3b8" font-family="Fira Code, monospace" font-size="12">cypress run --e2e</text>
+  </g>
+
+  <g transform="translate(800, 240)">
+    <rect width="320" height="180" rx="16" fill="url(#sae4Card)" stroke="#334155" stroke-width="2"/>
+    <text x="160" y="50" text-anchor="middle" fill="#60a5fa" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700">Nginx</text>
+    <text x="160" y="85" text-anchor="middle" fill="#cbd5f5" font-family="Inter, Segoe UI, sans-serif" font-size="14">Reverse proxy</text>
+    <text x="160" y="108" text-anchor="middle" fill="#cbd5f5" font-family="Inter, Segoe UI, sans-serif" font-size="14">App Android (Espresso)</text>
+    <rect x="40" y="130" width="240" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+    <text x="160" y="150" text-anchor="middle" fill="#94a3b8" font-family="Fira Code, monospace" font-size="12">K-Means · clustering</text>
+  </g>
+
+  <g transform="translate(80, 460)">
+    <rect width="1040" height="170" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="2"/>
+    <text x="32" y="44" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700">Résultats mesurables</text>
+
+    <g transform="translate(32, 70)">
+      <text fill="#10b981" font-family="Inter, Segoe UI, sans-serif" font-size="32" font-weight="700">15→1 min</text>
+      <text y="28" fill="#94a3b8" font-family="Inter, Segoe UI, sans-serif" font-size="13">Temps de boot dev</text>
+    </g>
+    <g transform="translate(280, 70)">
+      <text fill="#10b981" font-family="Inter, Segoe UI, sans-serif" font-size="32" font-weight="700">3FN</text>
+      <text y="28" fill="#94a3b8" font-family="Inter, Segoe UI, sans-serif" font-size="13">Modèle relationnel propre</text>
+    </g>
+    <g transform="translate(520, 70)">
+      <text fill="#10b981" font-family="Inter, Segoe UI, sans-serif" font-size="32" font-weight="700">N+1 → -90%</text>
+      <text y="28" fill="#94a3b8" font-family="Inter, Segoe UI, sans-serif" font-size="13">Requêtes optimisées</text>
+    </g>
+    <g transform="translate(800, 70)">
+      <text fill="#10b981" font-family="Inter, Segoe UI, sans-serif" font-size="32" font-weight="700">Stable</text>
+      <text y="28" fill="#94a3b8" font-family="Inter, Segoe UI, sans-serif" font-size="13">App Android fiabilisée</text>
+    </g>
+
+    <rect x="32" y="135" width="976" height="2" fill="url(#sae4Accent)"/>
+  </g>
+</svg>

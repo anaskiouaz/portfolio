@@ -20,7 +20,7 @@ class I18n {
                 'hero.status': 'Disponible pour alternance Septembre 2026',
                 'hero.role': 'Développeur logiciel — Backend, Data & IA',
                 'hero.location': 'Python · Java · Symfony · Docker — Étudiant BUT Informatique à Grenoble',
-                'hero.description': 'Étudiant en 2ᵉ année de BUT Informatique à l\'IUT2 de Grenoble. Je conçois des applications backend, des outils data et des automatisations IA, du modèle relationnel à la mise en production conteneurisée. Je cherche une alternance à partir de Septembre 2026, rythme [À REMPLACER PAR LE RYTHME RÉEL].',
+                'hero.description': 'Étudiant en 2ᵉ année de BUT Informatique à l\'IUT2 de Grenoble. Je conçois des applications backend, des outils data et des automatisations IA, du modèle relationnel à la mise en production conteneurisée. Je cherche une alternance à partir de Septembre 2026, rythme 3 semaines entreprise / 1 semaine école.',
                 'hero.btn-projects': 'Découvrir mes projets',
                 'hero.btn-cv': 'Télécharger CV',
                 'hero.btn-contact': 'Entrer en contact',
@@ -93,7 +93,7 @@ class I18n {
                 // Footer
                 'footer.title': 'Me',
                 'footer.title-accent': 'Contacter',
-                'footer.description': 'Je suis à la recherche d\'une alternance à partir de Septembre 2026 (rythme [À REMPLACER]) sur des postes de développeur backend, data ou IA. Si mon profil vous intéresse, écrivez-moi — je réponds sous 24h.',
+                'footer.description': 'Je suis à la recherche d\'une alternance à partir de Septembre 2026 (rythme 3 semaines entreprise / 1 semaine école) sur des postes de développeur backend, data ou IA. Si mon profil vous intéresse, écrivez-moi — je réponds sous 24h.',
                 'footer.copyright': '© 2026 Anas KIOUAZ. Tous droits réservés.',
                 'footer.location': 'Grenoble, France',
             },
@@ -111,7 +111,7 @@ class I18n {
                 'hero.status': 'Available for apprenticeship September 2026',
                 'hero.role': 'Software Developer — Backend, Data & AI',
                 'hero.location': 'Python · Java · Symfony · Docker — BUT Computer Science student in Grenoble',
-                'hero.description': '2nd-year BUT Computer Science student at IUT2 Grenoble. I build backend applications, data tools and AI automations, from relational modeling to containerized production. Looking for an apprenticeship from September 2026.',
+                'hero.description': '2nd-year BUT Computer Science student at IUT2 Grenoble. I build backend applications, data tools and AI automations, from relational modeling to containerized production. Looking for an apprenticeship from September 2026, rhythm 3 weeks company / 1 week school.',
                 'hero.btn-projects': 'Discover my projects',
                 'hero.btn-cv': 'Download CV',
                 'hero.btn-contact': 'Get in touch',
@@ -184,7 +184,7 @@ class I18n {
                 // Footer
                 'footer.title': 'Contact',
                 'footer.title-accent': 'Me',
-                'footer.description': 'I\'m looking for an apprenticeship from September 2026 on backend, data or AI developer roles. If my profile interests you, write to me — I respond within 24h.',
+                'footer.description': 'I\'m looking for an apprenticeship from September 2026 (rhythm 3 weeks company / 1 week school) on backend, data or AI developer roles. If my profile interests you, write to me — I respond within 24h.',
                 'footer.copyright': '© 2026 Anas KIOUAZ. All rights reserved.',
                 'footer.location': 'Grenoble, France',
             }

@@ -37,7 +37,7 @@ class ProjectsSystem {
                     en: 'Software Engineering & DevOps · 2026'
                 },
                 year: '2026',
-                images: ['img/sae4.png'],
+                images: ['img/sae4.svg'],
                 tech: ['Symfony 7', 'PostgreSQL 18', 'Docker / docker-compose', 'Android', 'Cypress', 'Espresso', 'K-Means', 'Linear', 'GitLab'],
                 context: {
                     fr: 'Projet SAE S4 du BUT Informatique IUT2 Grenoble : améliorer la qualité et les performances d\'une application existante de gestion des stages, sans en recréer le périmètre fonctionnel. Application initialement instable (crashs Android, base non normalisée, environnement VM lourd).',

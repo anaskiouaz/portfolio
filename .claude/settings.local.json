@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "Read(//c/Users/AnasKiouaz/Documents/**)",
+      "Bash(mv \"C:\\\\Users\\\\AnasKiouaz\\\\Documents\\\\portfolio-tmp\"/* \"C:\\\\Users\\\\AnasKiouaz\\\\Documents\\\\portfolio\"/)",
+      "Bash(mv \"C:\\\\Users\\\\AnasKiouaz\\\\Documents\\\\portfolio-tmp\"/.git \"C:\\\\Users\\\\AnasKiouaz\\\\Documents\\\\portfolio\"/)",
+      "Bash(rmdir \"C:\\\\Users\\\\AnasKiouaz\\\\Documents\\\\portfolio-tmp\")",
+      "Bash(mv \"C:\\\\Users\\\\AnasKiouaz\\\\Documents\\\\portfolio-tmp/.env\" \"C:\\\\Users\\\\AnasKiouaz\\\\Documents\\\\portfolio/\")",
+      "Bash(mv \"C:\\\\Users\\\\AnasKiouaz\\\\Documents\\\\portfolio-tmp/.github\" \"C:\\\\Users\\\\AnasKiouaz\\\\Documents\\\\portfolio/\")",
+      "Bash(echo \"exit:$?\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
+    ]
+  }
+}
