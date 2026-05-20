@@ -182,6 +182,32 @@ class ProjectsSystem {
                     en: 'Software platform to coordinate caregivers with focus on data flows'
                 },
                 github: 'https://github.com/anaskiouaz/WEAVE'
+            },
+            census: {
+                title: {
+                    fr: 'Analyse Démographique Mondiale',
+                    en: 'World Demographic Analysis'
+                },
+                category: {
+                    fr: 'Visualisation de Données',
+                    en: 'Data Visualization'
+                },
+                year: '2025',
+                images: ['img/project_placeholder.svg', 'img/project_placeholder.svg'],
+                tech: ['JavaScript', 'ES Modules', 'Census.gov API', 'Chart.js', 'MVC', 'HTML5', 'CSS3'],
+                context: {
+                    fr: 'Développement d\'une application web interactive pour l\'analyse et la visualisation de données démographiques mondiales. Utilisation de l\'API Census.gov (IDB 5-year) pour récupérer des indicateurs complexes (population, naissances, décès, taux de croissance, fécondité, mortalité) avec visualisations interactives et intuitives.',
+                    en: 'Development of an interactive web application for analyzing and visualizing world demographic data. Uses Census.gov API (IDB 5-year) to retrieve complex indicators (population, births, deaths, growth, fertility, mortality rates) with interactive and intuitive visualizations.'
+                },
+                role: {
+                    fr: 'Développement complet de l\'application en JavaScript vanilla avec architecture MVC stricte. Intégration API Census.gov avec gestion complète des requêtes asynchrones et pagination. Création de visualisations Chart.js avancées (pyramide des âges, évolution population, taux démographiques). Implémentation interface responsive HTML5/CSS3 sans dépendances externes. Défi résolu: gestion des réponses API volumineuses et caching efficace des données. Résultats: application fluide 60fps, support multi-navigateurs, interface intuitive pour explorer 200+ pays, accès libre via GitHub Pages.',
+                    en: 'Complete application development in vanilla JavaScript with strict MVC architecture. Census.gov API integration with full async request handling and pagination. Advanced Chart.js visualizations (age pyramid, population evolution, demographic rates). Responsive HTML5/CSS3 interface without external dependencies. Challenge solved: handling large API responses and efficient data caching. Results: smooth 60fps application, multi-browser support, intuitive interface to explore 200+ countries, free access via GitHub Pages.'
+                },
+                description: {
+                    fr: 'Application web interactive pour analyser et visualiser des données démographiques mondiales',
+                    en: 'Interactive web application to analyze and visualize world demographic data'
+                },
+                github: 'https://github.com/Ali-Kus/Projet-JS-API'
             }
         };
         
