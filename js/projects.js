@@ -1,6 +1,58 @@
 class ProjectsSystem {
     constructor() {
         this.projectData = {
+            weave: {
+                title: {
+                    fr: 'WEAVE — Plateforme d\'aide aux aidants',
+                    en: 'WEAVE — Caregiver Coordination Platform'
+                },
+                category: {
+                    fr: 'Produit logiciel & Data · 2025',
+                    en: 'Software Product & Data · 2025'
+                },
+                year: '2025',
+                images: ['img/weave_dashboard.png', 'img/weave_arch.png', 'img/weave_cicd.png'],
+                tech: ['Architecture logicielle', 'PostgreSQL', 'Docker', 'API temps réel', 'CI/CD', 'Azure'],
+                context: {
+                    fr: 'Projet universitaire BUT S3 — concevoir une plateforme logicielle pour coordonner les aidants familiaux autour d\'une personne dépendante. Face au vieillissement de la population, Weave centralise la coordination du maintien à domicile avec un focus sur les flux de données et la fiabilité opérationnelle. Projet élu meilleur de la promotion, première équipe à livrer, classée n°1 sur l\'ensemble de la promo.',
+                    en: 'BUT S3 university project — design a software platform to coordinate family caregivers around a dependent person. Weave centralizes home care coordination with focus on data flows and operational reliability. Elected best project of the class, first team to deliver, ranked #1 across the entire cohort.'
+                },
+                role: {
+                    fr: 'Conception de l\'architecture microservices (API, workers, dashboards). Modélisation de base de données complexe pour patients/intervenants/planning. Orchestration Docker + CI/CD Pipeline. Défis surmontés : synchronisation temps réel d\'équipes distribuées. Résultats : projet élu meilleur de la promotion, première équipe à livrer.',
+                    en: 'Microservices architecture design (API, workers, dashboards). Complex database modeling for patients/caregivers/scheduling. Docker orchestration + CI/CD Pipeline. Challenges: real-time team synchronization. Results: elected best project of the cohort, first team to deliver.'
+                },
+                description: {
+                    fr: 'Plateforme logicielle pour coordonner les aidants familiaux autour d\'une personne dépendante. Architecture data, modèle relationnel et flux d\'événements.',
+                    en: 'Software platform to coordinate family caregivers around a dependent person. Data architecture, relational model and event flows.'
+                },
+                github: 'https://github.com/anaskiouaz/WEAVE'
+            },
+            sae4: {
+                title: {
+                    fr: 'Refonte qualité — Carnet de suivi de stage',
+                    en: 'Quality Refactor — Internship Tracking App'
+                },
+                category: {
+                    fr: 'Génie logiciel & DevOps · 2026',
+                    en: 'Software Engineering & DevOps · 2026'
+                },
+                year: '2026',
+                images: ['img/sae4.png'],
+                tech: ['Symfony 7', 'PostgreSQL 18', 'Docker / docker-compose', 'Android', 'Cypress', 'Espresso', 'K-Means', 'Linear', 'GitLab'],
+                context: {
+                    fr: 'Projet SAE S4 du BUT Informatique IUT2 Grenoble : améliorer la qualité et les performances d\'une application existante de gestion des stages, sans en recréer le périmètre fonctionnel. Application initialement instable (crashs Android, base non normalisée, environnement VM lourd).',
+                    en: 'BUT S4 SAE project at IUT2 Grenoble: improve the quality and performance of an existing internship management application without recreating its functional scope. Initially unstable app (Android crashes, non-normalized database, heavy VM environment).'
+                },
+                role: {
+                    fr: '<strong>Chef de projet</strong> d\'une équipe de 6 développeurs. Responsable de la conteneurisation Docker complète, de la rétroconception du modèle relationnel, de la mise en place des tests UI Cypress sur le back-office Symfony, et de la coordination via Linear (workflow Kanban, lien Issues-Branches Git).\n\n<strong>Réalisations techniques :</strong>\n• Conteneurisation Docker complète : 3 services orchestrés (PostgreSQL 18, PHP-FPM 8.4, Nginx) via docker-compose, suppression de la VM monolithique, déploiement instantané indépendant de l\'OS hôte\n• Refonte du schéma relationnel en 3ᵉ forme normale : élimination des attributs multivalués, atomisation des rôles utilisateurs, clés composites pour garantir l\'unicité métier des candidatures\n• Tests E2E Cypress sur le back-office Symfony pour valider les parcours administrateur\n• Pilotage projet sur Linear (vues Kanban filtrées par domaine, traçabilité Issue-Branche-Commit)\n\n<strong>Résultats :</strong>\n• Application stable, déploiement reproductible sur n\'importe quel poste en une commande\n• Modèle de données conforme aux standards académiques et prêt à évoluer\n• Base prête pour une chaîne CI/CD GitLab',
+                    en: '<strong>Project lead</strong> for a team of 6 developers. Responsible for complete Docker containerization, relational model reverse-engineering, Cypress UI test setup on the Symfony back-office, and coordination via Linear (Kanban workflow, Issue-Branch-Git traceability).\n\n<strong>Technical achievements:</strong>\n• Full Docker containerization: 3 orchestrated services (PostgreSQL 18, PHP-FPM 8.4, Nginx) via docker-compose, VM removed, instant OS-independent deployment\n• Relational schema refactored to 3rd normal form: multi-valued attributes eliminated, user roles atomized, composite keys to enforce business uniqueness of applications\n• E2E Cypress tests on the Symfony back-office to validate admin flows\n• Project tracking on Linear (domain-filtered Kanban views, Issue-Branch-Commit traceability)\n\n<strong>Results:</strong>\n• Stable app, one-command reproducible deployment on any machine\n• Data model compliant with academic standards and ready to evolve\n• Ready for GitLab CI/CD pipeline'
+                },
+                description: {
+                    fr: 'Audit et refonte complète d\'une application existante (back-office Symfony + app mobile Android + API REST + BDD PostgreSQL). Conteneurisation Docker, mise en 3FN, tests E2E Cypress, clustering K-Means.',
+                    en: 'Full audit and refactor of an existing app (Symfony back-office + Android app + REST API + PostgreSQL). Docker containerization, 3NF normalization, E2E Cypress tests, K-Means clustering.'
+                },
+                github: null
+            },
             wirepas: {
                 title: {
                     fr: 'ExpoMiner - Plateforme IA Wirepas',
@@ -10,16 +62,16 @@ class ProjectsSystem {
                     fr: 'Architecture Logicielle & IA',
                     en: 'Software Architecture & AI'
                 },
-                year: '2027',
+                year: '2025',
                 images: ['img/wirepas_sequence.svg', 'img/wirepas_arch_placeholder.svg'],
-                tech: ['Node.js 20', 'TypeScript', 'Express.js', 'SQLite', 'Prisma ORM', 'Playwright', 'React', 'Tailwind', 'OpenCode API', 'APIs Externes (SIRENE/INPI/GLEIF)', 'HubSpot', 'NLP', 'LLM'],
+                tech: ['Node.js 20', 'TypeScript', 'Express.js', 'SQLite', 'Prisma ORM', 'Playwright', 'React', 'Tailwind', 'APIs Externes (SIRENE/INPI/GLEIF)', 'HubSpot', 'NLP', 'LLM'],
                 context: {
-                    fr: 'Développement d\'une plateforme complète (Web + Backend) pour automatiser la qualification de prospects B2B lors de 12+ salons professionnels/an. ExpoMiner réduit le temps de préparation de 3 jours à <30min via scraping intelligent, enrichissement multi-source et scoring IA. Contexte: Wirepas participe à des salons (Electronica, Smart City Expo, IBS, Enlit) pour identifier prospects IoT industriel, avec processus préalablement entièrement manuel (3j/salon = perte 36j commerciaux/an).',
+                    fr: 'Développement d\'une plateforme complète (Web + Backend) pour automatiser la qualification de prospects B2B lors de 12+ salons professionnels/an. ExpoMiner réduit le temps de préparation de 3 jours à <30min via scraping intelligent, enrichissement multi-source et scoring IA. Contexte : Wirepas participe à des salons (Electronica, Smart City Expo, IBS, Enlit) pour identifier prospects IoT industriel, avec processus préalablement entièrement manuel (3j/salon = perte 36j commerciaux/an).',
                     en: 'Development of a complete platform (Web + Backend) to automate B2B prospect qualification at 12+ trade shows annually. ExpoMiner reduces preparation time from 3 days to <30min via intelligent scraping, multi-source enrichment and AI scoring. Context: Wirepas participates in shows (Electronica, Smart City Expo, IBS, Enlit) to identify industrial IoT prospects, with previously entirely manual process (3 days/show = loss of 36 commercial days/year).'
                 },
                 role: {
-                    fr: 'Lead Developer & Architect. Conception complète de l\'architecture monorepo TypeScript (Backend Node.js + Frontend React). Orchestration du pipeline end-to-end: (1) Scraping multi-site via Playwright + détection heuristique des sélecteurs CSS, (2) Enrichissement via 8+ APIs (SIRENE/INPI/GLEIF/Wikidata/VIES/Pappers), (3) NLP local (TF-IDF + Embeddings MiniLM-L12-v2), (4) Scoring via LLM minimax-m2.5-free, (5) Intégration HubSpot automatisée. Implémentation infrastructure Docker + CI/CD GitHub Actions. Défis surmontés: pagination dynamique (scroll infini), extraction PDF avec reconnaissance technologique (DDG Lite + pdf-parse), déduplication multi-critères, optimisation NLP local pour <50ms/query, gestion erreurs APIs tierces. Résultats: automatisation 85% processus qualification, réduction temps 10h→30min/salon (97% gain), pipeline robuste 12+ salons/an, dashboard temps-réel avec exports HubSpot, couverture tests Vitest.',
-                    en: 'Lead Developer & Architect. Complete TypeScript monorepo architecture design (Node.js Backend + React Frontend). End-to-end pipeline orchestration: (1) Multi-site scraping via Playwright + heuristic CSS selector detection, (2) Enrichment via 8+ APIs (SIRENE/INPI/GLEIF/Wikidata/VIES/Pappers), (3) Local NLP (TF-IDF + MiniLM-L12-v2 Embeddings), (4) Scoring via LLM minimax-m2.5-free, (5) Automated HubSpot integration. Docker infrastructure + GitHub Actions CI/CD implementation. Challenges overcome: dynamic pagination (infinite scroll), PDF extraction with technology recognition (DDG Lite + pdf-parse), multi-criteria deduplication, local NLP optimization for <50ms/query, third-party API error handling. Results: 85% qualification process automation, time reduction 10h→30min/show (97% gain), robust pipeline 12+ shows/year, real-time dashboard with HubSpot exports, Vitest test coverage.'
+                    fr: 'Lead Developer & Architect. Conception complète de l\'architecture monorepo TypeScript (Backend Node.js + Frontend React). Orchestration du pipeline end-to-end : (1) Scraping multi-site via Playwright + détection heuristique des sélecteurs CSS, (2) Enrichissement via 8+ APIs (SIRENE/INPI/GLEIF/Wikidata/VIES/Pappers), (3) NLP local (TF-IDF + Embeddings MiniLM-L12-v2), (4) Scoring via LLM, (5) Intégration HubSpot automatisée. Implémentation infrastructure Docker + CI/CD GitHub Actions. Résultats : automatisation 85% processus qualification, réduction temps 10h→30min/salon (97% gain).',
+                    en: 'Lead Developer & Architect. Complete TypeScript monorepo architecture design (Node.js Backend + React Frontend). End-to-end pipeline orchestration: (1) Multi-site scraping via Playwright + heuristic CSS selector detection, (2) Enrichment via 8+ APIs (SIRENE/INPI/GLEIF/Wikidata/VIES/Pappers), (3) Local NLP (TF-IDF + MiniLM-L12-v2 Embeddings), (4) LLM scoring, (5) Automated HubSpot integration. Docker infrastructure + GitHub Actions CI/CD implementation. Results: 85% qualification process automation, time reduction 10h→30min/show (97% gain).'
                 },
                 description: {
                     fr: 'Automatisation qualification prospects B2B via scraping, enrichissement et scoring IA',
@@ -44,7 +96,7 @@ class ProjectsSystem {
                     en: 'Development of an automatic press article classification system using natural language processing techniques. The project implements a bag-of-words approach with cross-validation.'
                 },
                 role: {
-                    fr: 'Conception complète de l\'architecture du système et pipeline ML. Implémentation de l\'algorithme TF-IDF pour la vectorisation des textes et optimisation des hyperparamètres KNN. Résultats: précision de 89% sur l\'ensemble de test, temps de traitement <200ms par article, classifieur opérationnel sur 15+ catégories d\'articles.',
+                    fr: 'Conception complète de l\'architecture du système et pipeline ML. Implémentation de l\'algorithme TF-IDF pour la vectorisation des textes et optimisation des hyperparamètres KNN. Résultats : précision de 89% sur l\'ensemble de test, temps de traitement <200ms par article, classifieur opérationnel sur 15+ catégories d\'articles.',
                     en: 'Complete system architecture and ML pipeline design. TF-IDF algorithm implementation for text vectorization and KNN hyperparameter optimization. Results: 89% accuracy on test set, processing time <200ms per article, operational classifier on 15+ article categories.'
                 },
                 description: {
@@ -70,7 +122,7 @@ class ProjectsSystem {
                     en: 'Implementation of a deep convolutional neural network for image classification detecting critical events in real-time. The project includes complete preprocessing and data augmentation pipeline.'
                 },
                 role: {
-                    fr: 'Design complet de l\'architecture CNN avec 6 couches convolutives, batch normalization et dropout. Mise en place de data augmentation (rotation, flip, zoom). Défi résolu: overfitting via régularisation L2 et early stopping. Résultats: accuracy 94.2%, latence inférence <50ms, modèle déployable en edge.',
+                    fr: 'Design complet de l\'architecture CNN avec 6 couches convolutives, batch normalization et dropout. Mise en place de data augmentation (rotation, flip, zoom). Défi résolu : overfitting via régularisation L2 et early stopping. Résultats : accuracy 94.2%, latence inférence <50ms, modèle déployable en edge.',
                     en: 'Complete CNN architecture design with 6 convolutional layers, batch normalization and dropout. Data augmentation setup (rotation, flip, zoom). Solved challenge: overfitting via L2 regularization and early stopping. Results: 94.2% accuracy, inference latency <50ms, edge-deployable model.'
                 },
                 description: {
@@ -96,8 +148,8 @@ class ProjectsSystem {
                     en: 'Complete management application for sporting events developed as part of a university project. The application enables participant, event, result and ranking management in real-time.'
                 },
                 role: {
-                    fr: 'Architecture complète en pattern MVC avec séparation stricte des responsabilités. Développement de l\'interface utilisateur moderne avec JavaFX et CSS (20+ écrans). Conception et optimisation de la base de données MySQL (8 tables normalisées). Défi: synchronisation temps réel des résultats. Résultats: application stable pour 500+ participants, temps de réponse <100ms, génération automatique des classements.',
-                    en: 'Complete MVC architecture with strict separation of concerns. Modern user interface development with JavaFX and CSS (20+ screens). MySQL database design and optimization (8 normalized tables). Challenge: real-time result synchronization. Results: stable application for 500+ participants, response time <100ms, automatic ranking generation.'
+                    fr: 'Architecture complète en pattern MVC avec séparation stricte des responsabilités. Développement de l\'interface utilisateur moderne avec JavaFX et CSS (20+ écrans). Conception et optimisation de la base de données MySQL (8 tables normalisées). Défi : synchronisation temps réel des résultats. Résultats : application stable pour 500+ participants, temps de réponse <100ms.',
+                    en: 'Complete MVC architecture with strict separation of concerns. Modern user interface development with JavaFX and CSS (20+ screens). MySQL database design and optimization (8 normalized tables). Challenge: real-time result synchronization. Results: stable application for 500+ participants, response time <100ms.'
                 },
                 description: {
                     fr: 'Application de gestion complète pour événements sportifs',
@@ -118,12 +170,12 @@ class ProjectsSystem {
                 images: ['img/Hardis.png', 'img/Hardis.png'],
                 tech: ['HTML5', 'CSS3', 'JavaScript', 'UI Design', 'Responsive', 'Git'],
                 context: {
-                    fr: 'Création d\'un prototype d\'interface présentant l\'entreprise Hardis Group et sa démarche de transition écologique. Site vitrine avec animations et interactive elements.',
+                    fr: 'Création d\'un prototype d\'interface présentant l\'entreprise Hardis Group et sa démarche de transition écologique. Site vitrine avec animations et éléments interactifs.',
                     en: 'Creation of an interface prototype presenting Hardis Group company and its ecological transition approach. Showcase website with animations and interactive elements.'
                 },
                 role: {
-                    fr: 'Développement frontend complet avec HTML5/CSS3/JavaScript vanilla. Mise en place d\'interactions UI fluides (smooth scrolling, animations CSS, effects au hover). Design responsive mobile-first avec breakpoints optimisés. Résultats: temps chargement <1.5s, score Lighthouse 92+, 100% responsive sur tous les appareils.',
-                    en: 'Complete frontend development with HTML5/CSS3/vanilla JavaScript. Implementation of smooth UI interactions (smooth scrolling, CSS animations, hover effects). Mobile-first responsive design with optimized breakpoints. Results: load time <1.5s, Lighthouse score 92+, 100% responsive on all devices.'
+                    fr: 'Développement frontend complet avec HTML5/CSS3/JavaScript vanilla. Mise en place d\'interactions UI fluides (smooth scrolling, animations CSS, effets au hover). Design responsive mobile-first avec breakpoints optimisés. Résultats : temps chargement <1.5s, score Lighthouse 92+, 100% responsive.',
+                    en: 'Complete frontend development with HTML5/CSS3/vanilla JavaScript. Implementation of smooth UI interactions (smooth scrolling, CSS animations, hover effects). Mobile-first responsive design with optimized breakpoints. Results: load time <1.5s, Lighthouse score 92+, 100% responsive.'
                 },
                 description: {
                     fr: 'Prototype d\'interface avec design responsive et interactions UI',
@@ -148,43 +200,17 @@ class ProjectsSystem {
                     en: 'Puzzle and strategy game developed in Python using Tkinter library for the graphical interface. Scoring system and progressive levels.'
                 },
                 role: {
-                    fr: 'Conception de la logique du jeu en POO avec patterns (Factory, Observer). Développement de l\'interface graphique interactive Tkinter avec gestion d\'événements. Implémentation d\'algorithmes de tri pour la mécanique de jeu. Défi: optimisation du rendu en temps réel. Résultats: jeu fluide 60fps, système de progression 5+ niveaux, menus intuitifs.',
-                    en: 'Game logic design using OOP with patterns (Factory, Observer). Interactive Tkinter graphical interface development with event handling. Sorting algorithms implementation for game mechanics. Challenge: real-time rendering optimization. Results: smooth 60fps gameplay, 5+ level progression system, intuitive menus.'
+                    fr: 'Conception de la logique du jeu en POO avec patterns (Factory, Observer). Développement de l\'interface graphique interactive Tkinter avec gestion d\'événements. Implémentation d\'algorithmes de tri pour la mécanique de jeu. Résultats : jeu fluide 60fps, système de progression 5+ niveaux.',
+                    en: 'Game logic design using OOP with patterns (Factory, Observer). Interactive Tkinter graphical interface development with event handling. Sorting algorithms implementation for game mechanics. Results: smooth 60fps gameplay, 5+ level progression system.'
                 },
                 description: {
                     fr: 'Jeu de réflexion et stratégie avec interface Tkinter',
                     en: 'Puzzle and strategy game with Tkinter interface'
                 },
                 github: 'https://github.com/Jolly-Ak/SortGame'
-            },
-            weave: {
-                title: {
-                    fr: 'Weave - Plateforme de Soins',
-                    en: 'Weave - Healthcare Platform'
-                },
-                category: {
-                    fr: 'Produit logiciel & Data',
-                    en: 'Software Product & Data'
-                },
-                year: '2025',
-                images: ['img/weave_dashboard.png', 'img/weave_arch.png', 'img/weave_cicd.png'],
-                tech: ['Architecture logicielle', 'PostgreSQL', 'Docker', 'API temps réel', 'CI/CD', 'Azure'],
-                context: {
-                    fr: 'Face au vieillissement de la population, Weave centralise la coordination du maintien à domicile avec un focus sur les flux de données et la fiabilité opérationnelle. Plateforme SaaS pour coordinateurs de soins.',
-                    en: 'Facing population aging, Weave centralizes home care coordination with focus on data flows and operational reliability. SaaS platform for care coordinators.'
-                },
-                role: {
-                    fr: 'Founder & Lead Developer. Conception de l\'architecture microservices (API, workers, dashboards). Modélisation de base de données complexe pour patients/intervenants/planning. Orchestration Docker + CI/CD Pipeline. Défis surmontés: synchronisation temps réel d\'équipes distribuées, scalabilité pour 1000+ utilisateurs simultanés. Résultats: 99.8% uptime, 50ms latence API, adoption par 5 structures pilotes.',
-                    en: 'Founder & Lead Developer. Microservices architecture design (API, workers, dashboards). Complex database modeling for patients/caregivers/scheduling. Docker orchestration + CI/CD Pipeline. Challenges overcome: real-time team synchronization across distributed locations, scalability for 1000+ simultaneous users. Results: 99.8% uptime, 50ms API latency, adoption by 5 pilot structures.'
-                },
-                description: {
-                    fr: 'Plateforme logicielle pour coordonner les aidants avec focus sur les flux de données',
-                    en: 'Software platform to coordinate caregivers with focus on data flows'
-                },
-                github: 'https://github.com/anaskiouaz/WEAVE'
             }
         };
-        
+
         this.modal = null;
         this.fullscreenViewer = null;
         this.currentProject = null;
@@ -193,7 +219,6 @@ class ProjectsSystem {
         this.init();
     }
 
-    // Helper method to get translated values
     getTranslatedValue(value, lang) {
         return typeof value === 'object' ? value[lang] : value;
     }
@@ -203,8 +228,7 @@ class ProjectsSystem {
         this.setupFullscreenViewer();
         this.setupProjectCards();
         this.setupKeyboardNavigation();
-        
-        // Listen for language changes
+
         window.addEventListener('languageChanged', () => {
             if (this.currentProject && this.modal.classList.contains('active')) {
                 const project = this.projectData[this.currentProject];
@@ -216,12 +240,12 @@ class ProjectsSystem {
     setupModal() {
         this.modal = document.querySelector('.project-detail-modal');
         const closeBtn = this.modal.querySelector('.modal-close-btn');
-        
+
         closeBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             this.closeModal();
         });
-        
+
         this.modal.addEventListener('click', (e) => {
             if (e.target === this.modal) {
                 this.closeModal();
@@ -232,12 +256,12 @@ class ProjectsSystem {
     setupFullscreenViewer() {
         this.fullscreenViewer = document.querySelector('.fullscreen-viewer');
         const closeBtn = this.fullscreenViewer.querySelector('.fullscreen-close-btn');
-        
+
         closeBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             this.closeFullscreen();
         });
-        
+
         this.fullscreenViewer.addEventListener('click', (e) => {
             if (e.target === this.fullscreenViewer || e.target.classList.contains('fullscreen-image')) {
                 this.closeFullscreen();
@@ -247,18 +271,16 @@ class ProjectsSystem {
 
     setupProjectCards() {
         const cards = document.querySelectorAll('.project-card');
-        
-        // Update project card titles with translations
+
         this.updateProjectCardTitles();
-        
+
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 const projectId = card.dataset.projectId;
                 this.openModal(projectId);
             });
         });
-        
-        // Listen for language changes
+
         window.addEventListener('languageChanged', () => {
             this.updateProjectCardTitles();
         });
@@ -269,12 +291,12 @@ class ProjectsSystem {
         document.querySelectorAll('.project-card').forEach(card => {
             const projectId = card.dataset.projectId;
             const project = this.projectData[projectId];
-            
+
             if (project) {
                 const titleEl = card.querySelector('.project-title');
                 const categoryEl = card.querySelector('.project-category');
                 const descEl = card.querySelector('.project-description');
-                
+
                 if (titleEl && project.title) {
                     titleEl.textContent = this.getTranslatedValue(project.title, lang);
                 }
@@ -291,15 +313,15 @@ class ProjectsSystem {
     openModal(projectId) {
         const project = this.projectData[projectId];
         if (!project) return;
-        
+
         this.currentProject = projectId;
         this.scrollPosition = window.pageYOffset;
-        
+
         document.body.classList.add('modal-open');
         document.body.style.top = `-${this.scrollPosition}px`;
-        
+
         this.populateModal(project);
-        
+
         requestAnimationFrame(() => {
             this.modal.classList.add('active');
         });
@@ -311,28 +333,41 @@ class ProjectsSystem {
         const title = this.modal.querySelector('.modal-title');
         const techStack = this.modal.querySelector('.modal-tech-stack');
         const context = this.modal.querySelector('.modal-context');
-        const role = this.modal.querySelector('.modal-role');
+        const roleEl = this.modal.querySelector('.modal-role');
         const githubLink = this.modal.querySelector('.modal-btn-github');
         const gallery = this.modal.querySelector('.modal-gallery');
-        
+
         const lang = i18n.getCurrentLanguage();
-        
+
         category.textContent = this.getTranslatedValue(project.category, lang);
         year.textContent = project.year;
         title.textContent = this.getTranslatedValue(project.title, lang);
         context.textContent = this.getTranslatedValue(project.context, lang);
-        role.textContent = this.getTranslatedValue(project.role, lang);
-        githubLink.href = project.github;
-        
+
+        const roleContent = this.getTranslatedValue(project.role, lang);
+        roleEl.innerHTML = roleContent.replace(/\n/g, '<br>');
+
+        if (project.github) {
+            githubLink.href = project.github;
+            githubLink.classList.remove('disabled');
+            githubLink.style.pointerEvents = '';
+            githubLink.style.opacity = '';
+        } else {
+            githubLink.href = '#';
+            githubLink.classList.add('disabled');
+            githubLink.style.pointerEvents = 'none';
+            githubLink.style.opacity = '0.4';
+        }
+
         techStack.innerHTML = project.tech
             .map(tech => `<span>${tech}</span>`)
             .join('');
-        
+
         const projectTitle = this.getTranslatedValue(project.title, lang);
         gallery.innerHTML = project.images
             .map((image, index) => `<img src="${image}" alt="${projectTitle} - visuel ${index + 1}" class="gallery-image">`)
             .join('');
-        
+
         const galleryImages = gallery.querySelectorAll('.gallery-image');
         galleryImages.forEach(img => {
             img.addEventListener('error', () => {
@@ -350,7 +385,7 @@ class ProjectsSystem {
 
     closeModal() {
         this.modal.classList.remove('active');
-        
+
         setTimeout(() => {
             document.body.classList.remove('modal-open');
             document.body.style.top = '';
@@ -362,7 +397,7 @@ class ProjectsSystem {
         const fullscreenImage = this.fullscreenViewer.querySelector('.fullscreen-image');
         fullscreenImage.src = imageSrc;
         fullscreenImage.alt = alt;
-        
+
         requestAnimationFrame(() => {
             this.fullscreenViewer.classList.add('active');
         });

@@ -1151,3 +1151,68 @@ a {
         align-items: flex-start;
     }
 }
+
+/* ============================================
+   ALTERNANCE & NEW COMPONENTS
+   ============================================ */
+
+/* Hero rhythm line */
+.hero-rhythm {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.85rem;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.35);
+    border-radius: 6px;
+    color: #FFD700;
+    font-size: 0.88rem;
+}
+
+/* Winner badge on WEAVE card */
+.project-winner-badge {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #1a1000;
+    padding: 0.65rem 1.2rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.winner-sub {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-top: 0.2rem;
+    opacity: 0.8;
+}
+
+/* Role badge on project cards */
+.project-role-badge {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.12);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 0.2rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* Skill note (C++ in progress) */
+.skill-note {
+    display: block;
+    font-size: 0.62rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 0.15rem;
+}
+
+/* Disabled GitHub button in modal */
+.modal-btn-github.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+    cursor: not-allowed;
+}
