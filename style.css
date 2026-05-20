@@ -1158,14 +1158,47 @@ a {
 
 /* Hero rhythm line */
 .hero-rhythm {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
     margin-top: 0.5rem;
-    padding: 0.3rem 0.85rem;
+    padding: 0.4rem 0.95rem;
     background: rgba(255, 215, 0, 0.1);
     border: 1px solid rgba(255, 215, 0, 0.35);
     border-radius: 6px;
     color: #FFD700;
     font-size: 0.88rem;
+}
+
+.hero-rhythm-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(255, 215, 0, 0.16);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: background var(--duration-normal) var(--ease-smooth),
+                transform var(--duration-normal) var(--ease-smooth);
+}
+
+.hero-rhythm-link:hover {
+    background: rgba(255, 215, 0, 0.28);
+    transform: translateY(-1px);
+}
+
+.hero-rhythm-link svg {
+    transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.hero-rhythm-link:hover svg {
+    transform: translate(2px, -2px);
 }
 
 /* Winner badge on WEAVE card */

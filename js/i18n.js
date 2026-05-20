@@ -18,6 +18,8 @@ class I18n {
 
                 // Hero Section
                 'hero.status': 'Disponible pour alternance Septembre 2026',
+                'hero.rhythm': 'Rythme d\'alternance : 3 semaines entreprise / 1 semaine école',
+                'hero.rhythm-calendar': 'Voir le calendrier officiel BUT3',
                 'hero.role': 'Développeur logiciel — Backend, Data & IA',
                 'hero.location': 'Python · Java · Symfony · Docker — Étudiant BUT Informatique à Grenoble',
                 'hero.description': 'Étudiant en 2ᵉ année de BUT Informatique à l\'IUT2 de Grenoble. Je conçois des applications backend, des outils data et des automatisations IA, du modèle relationnel à la mise en production conteneurisée. Je cherche une alternance à partir de Septembre 2026, rythme 3 semaines entreprise / 1 semaine école.',
@@ -109,6 +111,8 @@ class I18n {
 
                 // Hero Section
                 'hero.status': 'Available for apprenticeship September 2026',
+                'hero.rhythm': 'Apprenticeship rhythm: 3 weeks company / 1 week school',
+                'hero.rhythm-calendar': 'View official BUT3 calendar',
                 'hero.role': 'Software Developer — Backend, Data & AI',
                 'hero.location': 'Python · Java · Symfony · Docker — BUT Computer Science student in Grenoble',
                 'hero.description': '2nd-year BUT Computer Science student at IUT2 Grenoble. I build backend applications, data tools and AI automations, from relational modeling to containerized production. Looking for an apprenticeship from September 2026, rhythm 3 weeks company / 1 week school.',
