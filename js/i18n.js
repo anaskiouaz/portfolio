@@ -17,12 +17,12 @@ class I18n {
                 'nav.language': 'Langue',
 
                 // Hero Section
-                'hero.status': 'Disponible pour alternance Septembre 2026',
+                'hero.status': 'Disponible pour alternance septembre 2026',
                 'hero.rhythm': 'Rythme d\'alternance :',
                 'hero.rhythm-calendar': 'Voir le calendrier officiel BUT3',
                 'hero.role': 'Développeur logiciel — Backend, Data & IA',
                 'hero.location': 'Python · Java · Symfony · Docker — Étudiant BUT Informatique à Grenoble',
-                'hero.description': 'Étudiant en 2ᵉ année de BUT Informatique à l\'IUT2 de Grenoble. Je conçois des applications backend, des outils data et des automatisations IA, du modèle relationnel à la mise en production conteneurisée. Je cherche une alternance à partir de Septembre 2026, rythme 3 semaines entreprise / 1 semaine école.',
+                'hero.description': 'Étudiant en 2ᵉ année de BUT Informatique à l\'IUT2 de Grenoble. Je conçois des applications backend, des outils data et des automatisations IA, du modèle relationnel à la mise en production conteneurisée. Je cherche une alternance à partir de septembre 2026, rythme 3 semaines entreprise / 1 semaine école.',
                 'hero.btn-projects': 'Découvrir mes projets',
                 'hero.btn-cv': 'Télécharger CV',
                 'hero.btn-contact': 'Entrer en contact',
@@ -54,7 +54,7 @@ class I18n {
                 'about.education': 'Formation',
                 'about.education-value': 'BUT Informatique (IUT2)',
                 'about.availability-label': 'Disponibilité',
-                'about.availability-value': 'Alternance Septembre 2026',
+                'about.availability-value': 'Alternance septembre 2026',
 
                 // Projects Section
                 'projects.title': 'Projets Sélectionnés',
@@ -95,9 +95,21 @@ class I18n {
                 // Footer
                 'footer.title': 'Me',
                 'footer.title-accent': 'Contacter',
-                'footer.description': 'Je suis à la recherche d\'une alternance à partir de Septembre 2026 (rythme 3 semaines entreprise / 1 semaine école) sur des postes de développeur backend, data ou IA. Si mon profil vous intéresse, écrivez-moi — je réponds sous 24h.',
+                'footer.description': 'Je suis à la recherche d\'une alternance à partir de septembre 2026 (rythme 3 semaines entreprise / 1 semaine école) sur des postes de développeur backend, data ou IA. Si mon profil vous intéresse, écrivez-moi — je réponds sous 24h.',
                 'footer.copyright': '© 2026 Anas KIOUAZ. Tous droits réservés.',
                 'footer.location': 'Grenoble, France',
+
+                // Contact Form
+                'form.name': 'Nom complet',
+                'form.email': 'Email',
+                'form.company': 'Entreprise (optionnel)',
+                'form.message': 'Votre message',
+                'form.message-placeholder': 'Décrivez brièvement le poste, le contexte ou votre question…',
+                'form.submit': 'Envoyer le message',
+                'form.success': 'Message envoyé avec succès. Je vous réponds sous 24h.',
+                'form.error': 'Une erreur est survenue. Réessayez ou écrivez-moi directement par email.',
+                'form.error-network': 'Connexion impossible. Vérifiez votre réseau et réessayez.',
+                'form.error-validation': 'Merci de compléter les champs obligatoires.',
             },
             en: {
                 // Navigation
@@ -191,6 +203,18 @@ class I18n {
                 'footer.description': 'I\'m looking for an apprenticeship from September 2026 (rhythm 3 weeks company / 1 week school) on backend, data or AI developer roles. If my profile interests you, write to me — I respond within 24h.',
                 'footer.copyright': '© 2026 Anas KIOUAZ. All rights reserved.',
                 'footer.location': 'Grenoble, France',
+
+                // Contact Form
+                'form.name': 'Full name',
+                'form.email': 'Email',
+                'form.company': 'Company (optional)',
+                'form.message': 'Your message',
+                'form.message-placeholder': 'Briefly describe the role, context or your question…',
+                'form.submit': 'Send message',
+                'form.success': 'Message sent successfully. I\'ll get back to you within 24h.',
+                'form.error': 'Something went wrong. Please try again or email me directly.',
+                'form.error-network': 'Network error. Check your connection and try again.',
+                'form.error-validation': 'Please fill in the required fields.',
             }
         };
         this.init();
