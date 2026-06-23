@@ -34,8 +34,27 @@
                 <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
             </ul>
 
+<<<<<<< Updated upstream
             <a href="cv/CV anas.pdf" target="_blank" class="cta-nav">
                 <span>Curriculum</span>
+=======
+            <div class="language-switcher">
+                <button id="langToggle" class="lang-toggle" title="Toggle language">
+                    <span class="lang-text">EN</span>
+                </button>
+            </div>
+
+            <button id="searchTrigger" class="search-trigger" title="Rechercher une compétence (Ctrl+K)" aria-label="Rechercher une compétence">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/>
+                </svg>
+                <span>Compétences</span>
+                <span class="search-shortcut">⌘K</span>
+            </button>
+
+            <a href="cv/CV-Anas-KIOUAZ.pdf" target="_blank" download class="cta-nav">
+                <span data-i18n="nav.cv">Télécharger mon CV</span>
+>>>>>>> Stashed changes
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M1 15L15 1M15 1H5M15 1V11" stroke="currentColor" stroke-width="2" />
                 </svg>
@@ -45,10 +64,17 @@
     </nav>
 
     <section id="home" class="hero-section">
-        <div class="hero-grid">
-            <div class="hero-content">
-                <div class="hero-eyebrow" data-scroll-reveal>
+        <canvas id="heroCanvas" aria-hidden="true"></canvas>
+        <div class="aurora-bg" aria-hidden="true">
+            <div class="aurora-blob"></div>
+            <div class="aurora-blob"></div>
+            <div class="aurora-blob"></div>
+        </div>
+        <div class="hero-center">
+            <div class="hero-header-top" data-scroll-reveal>
+                <div class="hero-eyebrow">
                     <span class="status-dot"></span>
+<<<<<<< Updated upstream
                     <span>Disponible pour nouveaux projets</span>
                 </div>
 
@@ -100,6 +126,49 @@
                 <div class="visual-blob blob-1"></div>
                 <div class="visual-blob blob-2"></div>
                 <div class="visual-mesh"></div>
+=======
+                    <span data-i18n="hero.status">Disponible pour alternance Sept 2026</span>
+                </div>
+            </div>
+
+            <h1 class="hero-title text-center" data-scroll-reveal>
+                Anas <span class="title-highlight">KIOUAZ</span>
+            </h1>
+
+            <div class="hero-subtitle text-center" data-scroll-reveal>
+                <p class="subtitle-large"><span id="typewriterRole" class="typewriter-text">Développeur Backend, Data &amp; IA</span><span class="typewriter-cursor" aria-hidden="true">|</span></p>
+                <p class="subtitle-location" data-i18n="hero.location">Python · Java · Symfony · Docker — Étudiant BUT Informatique à Grenoble</p>
+            </div>
+
+            <div class="hero-search-container" data-scroll-reveal>
+                <button class="main-search-wrapper" id="mainSearchTrigger" aria-label="Rechercher sur le portfolio">
+                    <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/>
+                    </svg>
+                    <span class="main-search-placeholder" data-i18n="hero.search-placeholder">Rechercher une compétence, un projet, une techno...</span>
+                    <div class="main-search-shortcut">
+                        <kbd>Ctrl</kbd> <kbd>K</kbd>
+                    </div>
+                </button>
+                
+                <div class="search-suggestions">
+                    <button class="suggestion-tag" onclick="document.getElementById('searchTrigger').click(); setTimeout(() => { document.getElementById('searchInput').value = 'Python'; window.__search.doSearch(); }, 100)">Python</button>
+                    <button class="suggestion-tag" onclick="document.getElementById('searchTrigger').click(); setTimeout(() => { document.getElementById('searchInput').value = 'Docker'; window.__search.doSearch(); }, 100)">Docker</button>
+                    <button class="suggestion-tag" onclick="document.getElementById('searchTrigger').click(); setTimeout(() => { document.getElementById('searchInput').value = 'Machine Learning'; window.__search.doSearch(); }, 100)">Machine Learning</button>
+                    <button class="suggestion-tag" onclick="document.getElementById('searchTrigger').click(); setTimeout(() => { document.getElementById('searchInput').value = 'React'; window.__search.doSearch(); }, 100)">React</button>
+                    <button class="suggestion-tag" onclick="document.getElementById('searchTrigger').click(); setTimeout(() => { document.getElementById('searchInput').value = 'Symfony'; window.__search.doSearch(); }, 100)">Symfony</button>
+                </div>
+>>>>>>> Stashed changes
+            </div>
+
+            <div class="hero-actions justify-center" data-scroll-reveal>
+                <a href="#about" class="btn-primary btn-magnetic">
+                    <span data-i18n="hero.btn-discover">Découvrir mon profil</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <a href="cv/CV-Anas-KIOUAZ.pdf" target="_blank" download class="btn-secondary btn-cv">
+                    <span data-i18n="hero.btn-cv">Télécharger CV</span>
+                </a>
             </div>
         </div>
 
@@ -116,6 +185,7 @@
                 <h2 class="section-title-large">Mon Parcours</h2>
             </div>
 
+<<<<<<< Updated upstream
             <div class="about-grid">
                 <div class="about-story" data-scroll-reveal>
                     <div class="story-block">
@@ -153,8 +223,20 @@
                         <div class="detail-row">
                             <span class="detail-label">Âge</span>
                             <span class="detail-value">19 ans</span>
+=======
+            <div class="bento-grid">
+                <div class="bento-tile bento-profile" data-scroll-reveal>
+                    <div class="profile-header-bento">
+                        <div class="profile-avatar">AK</div>
+                        <div>
+                            <h3 style="margin-bottom: 0.2rem;">Anas KIOUAZ</h3>
+                            <p style="color: var(--text-tertiary); font-size: 0.85rem;">Développeur Backend, Data &amp; IA</p>
+>>>>>>> Stashed changes
                         </div>
+                    </div>
+                    <div class="profile-metrics-bento" style="margin-top: 1.5rem;">
                         <div class="detail-row">
+<<<<<<< Updated upstream
                             <span class="detail-label">Localisation</span>
                             <span class="detail-value">Saint-Martin-d'Hères, FR</span>
                         </div>
@@ -165,7 +247,39 @@
                         <div class="detail-row">
                             <span class="detail-label">Disponibilité</span>
                             <span class="detail-value">Stage 2025</span>
+=======
+                            <span class="detail-label" data-i18n="about.location">Localisation</span>
+                            <span class="detail-value" data-i18n="about.location-value">Grenoble, FR</span>
                         </div>
+                        <div class="detail-row">
+                            <span class="detail-label" data-i18n="about.availability-label">Disponibilité</span>
+                            <span class="detail-value" data-i18n="about.availability-value">Alternance Sept 2026</span>
+>>>>>>> Stashed changes
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-tile bento-stats" data-scroll-reveal>
+                    <div class="stat-item">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label" data-i18n="hero.stat-projects">Projets Réalisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2027</span>
+                        <span class="stat-label" data-i18n="hero.stat-diploma">Diplôme BUT</span>
+                    </div>
+                </div>
+
+                <div class="bento-tile bento-bio" data-scroll-reveal>
+                    <h3 class="story-title" data-i18n="about.student">Développeur en Formation</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="about.bio1">
+                        Étudiant en 2ᵉ année de BUT Informatique à l'IUT2 de Grenoble. Je conçois des applications backend, des outils data et des automatisations IA. Chef de projet sur la refonte logicielle d'une app (Symfony/Android) et contributeur au projet WEAVE (élu n°1).
+                    </p>
+                    <div class="bento-tech-tags" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="padding: 0.3rem 0.7rem; background: rgba(255,255,255,0.05); border-radius: 999px; font-size: 0.75rem; border: 1px solid var(--border);">Python</span>
+                        <span style="padding: 0.3rem 0.7rem; background: rgba(255,255,255,0.05); border-radius: 999px; font-size: 0.75rem; border: 1px solid var(--border);">Java</span>
+                        <span style="padding: 0.3rem 0.7rem; background: rgba(255,255,255,0.05); border-radius: 999px; font-size: 0.75rem; border: 1px solid var(--border);">Symfony</span>
+                        <span style="padding: 0.3rem 0.7rem; background: rgba(255,255,255,0.05); border-radius: 999px; font-size: 0.75rem; border: 1px solid var(--border);">Docker</span>
                     </div>
                 </div>
             </div>
@@ -338,9 +452,22 @@
                     <h3>Contexte</h3>
                     <p class="modal-context"></p>
                 </div>
+                <div class="modal-section modal-ppp-section modal-teamwork-section">
+                    <h3 data-i18n="projects.teamwork">Travail collectif</h3>
+                    <p class="modal-teamwork"></p>
+                </div>
                 <div class="modal-section">
+<<<<<<< Updated upstream
                     <h3>Mon Rôle</h3>
                     <p class="modal-role"></p>
+=======
+                    <h3 data-i18n="projects.role">Ma contribution</h3>
+                    <div class="modal-role"></div>
+>>>>>>> Stashed changes
+                </div>
+                <div class="modal-section modal-ppp-section">
+                    <h3 data-i18n="projects.skills-acquired">Compétences acquises</h3>
+                    <div class="modal-skills-acquired"></div>
                 </div>
                 <div class="modal-actions">
                     <a href="#" target="_blank" class="modal-btn-github">
@@ -452,6 +579,7 @@
                         <div class="interest-emoji">♟️</div>
                         <div class="interest-particles"></div>
                     </div>
+<<<<<<< Updated upstream
                     <h4>Échecs</h4>
                     <p>Planification stratégique & Anticipation</p>
                 </div>
@@ -481,6 +609,73 @@
                     </div>
                     <h4>League of Legends</h4>
                     <p>Prise de décision rapide & Stratégie</p>
+=======
+                    <div class="language-card-new" data-lang="italian">
+                        <div class="lang-flag-circle">🇮🇹</div>
+                        <h4 class="lang-name" data-i18n="lang.italian">Italien</h4>
+                        <div class="lang-level-bar">
+                            <div class="lang-level-fill" data-level="30"></div>
+                        </div>
+                        <span class="lang-label" data-i18n="lang.italian-skills">Notions</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interests-section-new" data-scroll-reveal>
+                <h3 class="subsection-title" data-i18n="interests.title">Centres d'Intérêt</h3>
+                <p class="interests-intro" data-i18n="interests.intro">Au-delà du code, ce qui me passionne</p>
+
+                <div class="carousel-container">
+                    <div class="carousel-track" id="interestsTrack">
+                        <div class="carousel-card" style="background-image: url('img/placeholder-boxing.jpg'); background-color: #1a1a1a;" data-interest="boxing">
+                            <div class="card-overlay">
+                                <div class="card-content">
+                                    <h4 data-i18n="interest.boxing">Boxe Compétition</h4>
+                                    <p data-i18n="interest.boxing-desc">Discipline, stratégie et dépassement de soi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card" style="background-image: url('img/placeholder-swimming.jpg'); background-color: #1a1a1a;" data-interest="swimming">
+                            <div class="card-overlay">
+                                <div class="card-content">
+                                    <h4 data-i18n="interest.swimming">Natation</h4>
+                                    <p data-i18n="interest.swimming-desc">Endurance et clarté mentale</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card" style="background-image: url('img/placeholder-chess.jpg'); background-color: #1a1a1a;" data-interest="chess">
+                            <div class="card-overlay">
+                                <div class="card-content">
+                                    <h4 data-i18n="interest.chess">Échecs</h4>
+                                    <p data-i18n="interest.chess-desc">Tactique et anticipation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card" style="background-image: url('img/placeholder-calisthenics.jpg'); background-color: #1a1a1a;" data-interest="calisthenics">
+                            <div class="card-overlay">
+                                <div class="card-content">
+                                    <h4 data-i18n="interest.calisthenics">Callisthénie</h4>
+                                    <p data-i18n="interest.calisthenics-desc">Force et contrôle du corps</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card" style="background-image: url('img/placeholder-ultimate.jpg'); background-color: #1a1a1a;" data-interest="ultimate">
+                            <div class="card-overlay">
+                                <div class="card-content">
+                                    <h4 data-i18n="interest.ultimate">Ultimate Frisbee</h4>
+                                    <p data-i18n="interest.ultimate-desc">Esprit d'équipe et fair-play</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn prev-btn" id="prevInterest" aria-label="Previous">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button class="carousel-btn next-btn" id="nextInterest" aria-label="Next">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+>>>>>>> Stashed changes
                 </div>
             </div>
         </div>
@@ -540,15 +735,45 @@
         </div>
     </footer>
 
+<<<<<<< Updated upstream
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"></script>
+=======
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Recherche de compétences">
+        <div class="search-panel">
+            <div class="search-input-wrapper">
+                <svg class="sr-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/>
+                </svg>
+                <input type="text" id="searchInput"
+                       placeholder="Docker, Python, Machine Learning, Symfony…"
+                       autocomplete="off" spellcheck="false">
+                <kbd class="sr-esc-hint">ESC</kbd>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+            <div class="search-footer">
+                <span><kbd>↑↓</kbd> naviguer</span>
+                <span><kbd>↵</kbd> ouvrir projet</span>
+                <span><kbd>ESC</kbd> fermer</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+>>>>>>> Stashed changes
     <script src="js/projects.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/solar-system-skills.js"></script>
     <script src="js/projects.js"></script>
     <!-- <script src="js/physics-sack.js"></script> -->
     <script src="script.js"></script>
+<<<<<<< Updated upstream
 
 
+=======
+    <script src="effects.js"></script>
+    <script src="js/search.js"></script>
+>>>>>>> Stashed changes
 </body>
 
 </html>

@@ -796,5 +796,76 @@ document.head.appendChild(enhancedStyles);
 
 // Initialiser les animations au chargement
 document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< Updated upstream
     new EnhancedSkillsAnimations();
 });
+=======
+    new PortfolioUI();
+    new LanguageSwitcher();
+    new ContactForm();
+    new InterestsCarousel();
+});
+
+// ============================================
+// INTERESTS CAROUSEL
+// ============================================
+class InterestsCarousel {
+    constructor() {
+        this.track = document.getElementById('interestsTrack');
+        this.prevBtn = document.getElementById('prevInterest');
+        this.nextBtn = document.getElementById('nextInterest');
+        this.currentIndex = 0;
+        
+        if (this.track && this.prevBtn && this.nextBtn) {
+            this.init();
+        }
+    }
+
+    init() {
+        this.nextBtn.addEventListener('click', () => this.moveNext());
+        this.prevBtn.addEventListener('click', () => this.movePrev());
+        window.addEventListener('resize', () => this.updateCarousel());
+        
+        // Touch events for mobile swiping
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        this.track.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+        
+        this.track.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) this.moveNext();
+            if (touchEndX - touchStartX > 50) this.movePrev();
+        }, {passive: true});
+    }
+
+    moveNext() {
+        const totalCards = this.track.querySelectorAll('.carousel-card').length;
+        const cardWidth = this.track.querySelector('.carousel-card').offsetWidth;
+        const visibleCards = Math.floor(this.track.parentElement.offsetWidth / cardWidth);
+        
+        // Don't scroll past the last visible card
+        if (this.currentIndex < totalCards - visibleCards) {
+            this.currentIndex++;
+            this.updateCarousel();
+        }
+    }
+
+    movePrev() {
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.updateCarousel();
+        }
+    }
+
+    updateCarousel() {
+        if (!this.track.querySelector('.carousel-card')) return;
+        const cardWidth = this.track.querySelector('.carousel-card').offsetWidth;
+        const gap = parseInt(window.getComputedStyle(this.track).gap) || 24;
+        const moveAmount = (cardWidth + gap) * this.currentIndex;
+        this.track.style.transform = `translateX(-${moveAmount}px)`;
+    }
+}
+>>>>>>> Stashed changes
