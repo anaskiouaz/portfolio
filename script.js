@@ -796,15 +796,29 @@ document.head.appendChild(enhancedStyles);
 
 // Initialiser les animations au chargement
 document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< Updated upstream
     new EnhancedSkillsAnimations();
-});
-=======
-    new PortfolioUI();
-    new LanguageSwitcher();
-    new ContactForm();
     new InterestsCarousel();
+    setupLanguageToggle();
 });
+
+// === LANGUAGE TOGGLE (EN / FR) ===
+function setupLanguageToggle() {
+    const toggle = document.getElementById('langToggle');
+    if (!toggle || typeof i18n === 'undefined') return;
+
+    const label = toggle.querySelector('.lang-text');
+    // Le bouton affiche la langue vers laquelle on bascule.
+    const syncLabel = () => {
+        if (label) label.textContent = i18n.getCurrentLanguage() === 'fr' ? 'EN' : 'FR';
+    };
+
+    syncLabel();
+    toggle.addEventListener('click', () => {
+        const next = i18n.getCurrentLanguage() === 'fr' ? 'en' : 'fr';
+        i18n.setLanguage(next);
+        syncLabel();
+    });
+}
 
 // ============================================
 // INTERESTS CAROUSEL
@@ -868,4 +882,3 @@ class InterestsCarousel {
         this.track.style.transform = `translateX(-${moveAmount}px)`;
     }
 }
->>>>>>> Stashed changes

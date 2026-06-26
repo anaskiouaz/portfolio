@@ -25,6 +25,8 @@ class I18n {
                 'hero.location': 'Python · Java · Symfony · Docker — Étudiant BUT Informatique à Grenoble',
                 'hero.description': 'Étudiant en 2ᵉ année de BUT Informatique à l\'IUT2 de Grenoble. Je conçois des applications backend, des outils data et des automatisations IA, du modèle relationnel à la mise en production conteneurisée. Je cherche une alternance à partir de septembre 2026, rythme 3 semaines entreprise / 1 semaine école.',
                 'hero.btn-projects': 'Découvrir mes projets',
+                'hero.btn-discover': 'Découvrir mon profil',
+                'hero.search-placeholder': 'Rechercher une compétence, un projet, une techno…',
                 'hero.btn-cv': 'Télécharger CV',
                 'hero.btn-contact': 'Entrer en contact',
                 'hero.stat-projects': 'Projets Réalisés',
@@ -68,9 +70,11 @@ class I18n {
                 'projects.github': 'Voir sur GitHub',
 
                 // Skills Section
-                'skills.title': 'Expertise Technique',
+                'skills.title': 'Compétences',
                 'skills.section-number': '03',
-                'skills.subtitle': 'IA, data et développement d\'applications',
+                'skills.subtitle': 'Des qualités humaines au service de l\'expertise technique',
+                'skills.transversal': 'Compétences Transversales',
+                'skills.technical': 'Compétences Techniques',
                 'skills.languages': 'Langues',
 
                 // Languages
@@ -133,6 +137,8 @@ class I18n {
                 'hero.location': 'Python · Java · Symfony · Docker — BUT Computer Science student in Grenoble',
                 'hero.description': '2nd-year BUT Computer Science student at IUT2 Grenoble. I build backend applications, data tools and AI automations, from relational modeling to containerized production. Looking for an apprenticeship from September 2026, rhythm 3 weeks company / 1 week school.',
                 'hero.btn-projects': 'Discover my projects',
+                'hero.btn-discover': 'Discover my profile',
+                'hero.search-placeholder': 'Search for a skill, a project, a technology…',
                 'hero.btn-cv': 'Download CV',
                 'hero.btn-contact': 'Get in touch',
                 'hero.stat-projects': 'Projects Completed',
@@ -176,9 +182,11 @@ class I18n {
                 'projects.github': 'View on GitHub',
 
                 // Skills Section
-                'skills.title': 'Technical Expertise',
+                'skills.title': 'Skills',
                 'skills.section-number': '03',
-                'skills.subtitle': 'AI, data and application development',
+                'skills.subtitle': 'Human qualities serving technical expertise',
+                'skills.transversal': 'Soft Skills',
+                'skills.technical': 'Technical Skills',
                 'skills.languages': 'Languages',
 
                 // Languages

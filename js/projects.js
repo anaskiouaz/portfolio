@@ -1,8 +1,6 @@
 class ProjectsSystem {
     constructor() {
         this.projectData = {
-<<<<<<< Updated upstream
-=======
             weave: {
                 title: {
                     fr: 'WEAVE — Plateforme d\'aide aux aidants',
@@ -93,18 +91,12 @@ class ProjectsSystem {
                 teamwork: null,
                 skills_acquired: ['Architecture monorepo TypeScript', 'Scraping Playwright', 'NLP / Embeddings', 'Scoring LLM', 'API REST Node.js', 'React / Tailwind', 'Docker / GitHub Actions CI-CD', 'Intégration HubSpot']
             },
->>>>>>> Stashed changes
             ml: {
                 title: 'Classification de Dépêches',
                 category: 'Machine Learning',
                 year: '2025',
                 images: ['img/ML1.png', 'img/ML1.png', 'img/ML1.png'],
                 tech: ['Java', 'NLP', 'TF-IDF', 'KNN', 'Machine Learning'],
-<<<<<<< Updated upstream
-                context: 'Développement d\'un système de classification automatique d\'articles de presse utilisant des techniques de traitement du langage naturel. Le projet implémente une approche hybride combinant l\'analyse lexicale et l\'algorithme des k plus proches voisins pour obtenir une précision optimale.',
-                role: 'Conception complète de l\'architecture du système, implémentation de l\'algorithme TF-IDF pour la vectorisation des textes, optimisation des hyperparamètres KNN, et développement de l\'interface de test. Réalisation d\'une analyse comparative de performances avec différents modèles.',
-                github: 'https://github.com/Jolly-Ak/News-Classification-ML'
-=======
                 context: {
                     fr: 'Développement d\'un système de classification automatique d\'articles de presse utilisant des techniques de traitement du langage naturel. Le projet implémente une approche par sacs de mots avec validation croisée.',
                     en: 'Development of an automatic press article classification system using natural language processing techniques. The project implements a bag-of-words approach with cross-validation.'
@@ -120,7 +112,6 @@ class ProjectsSystem {
                 github: 'https://github.com/Jolly-Ak/News-Classification-ML',
                 teamwork: null,
                 skills_acquired: ['TF-IDF', 'Algorithme KNN', 'Validation croisée', 'NLP (tokenisation, stop words)', 'Java algorithmique', 'Évaluation de modèle ML']
->>>>>>> Stashed changes
             },
             cnn: {
                 title: 'Classification par CNN',
@@ -128,11 +119,6 @@ class ProjectsSystem {
                 year: '2024',
                 images: ['img/1745556736982.jpg', 'img/1745556736982.jpg'],
                 tech: ['Python', 'TensorFlow', 'Keras', 'CNN', 'Data Augmentation', 'NumPy'],
-<<<<<<< Updated upstream
-                context: 'Implémentation d\'un réseau de neurones convolutifs profond pour la classification d\'images. Le projet inclut un pipeline complet de prétraitement des données, data augmentation, entraînement du modèle avec early stopping, et évaluation des performances sur un ensemble de validation.',
-                role: 'Design de l\'architecture du réseau neuronal avec multiples couches convolutives et pooling, mise en place de techniques de régularisation (dropout, batch normalization), optimisation des hyperparamètres, et création d\'un système de visualisation des prédictions et des performances du modèle.',
-                github: 'https://github.com/Jolly-Ak/Valorant-Kill-Detection'
-=======
                 context: {
                     fr: 'Implémentation d\'un réseau de neurones convolutifs profond pour la classification d\'images, permettant la détection d\'événements critiques en temps réel. Le projet inclut un pipeline complet de prétraitement et d\'augmentation des données.',
                     en: 'Implementation of a deep convolutional neural network for image classification detecting critical events in real-time. The project includes complete preprocessing and data augmentation pipeline.'
@@ -148,7 +134,6 @@ class ProjectsSystem {
                 github: 'https://github.com/Jolly-Ak/Valorant-Kill-Detection',
                 teamwork: null,
                 skills_acquired: ['Réseaux de neurones convolutifs (CNN)', 'TensorFlow / Keras', 'Data augmentation', 'Régularisation L2 / Early stopping', 'Pipeline prétraitement images', 'Déploiement modèle edge']
->>>>>>> Stashed changes
             },
             javafx: {
                 title: 'ERP Grand Prix',
@@ -156,11 +141,6 @@ class ProjectsSystem {
                 year: '2025',
                 images: ['img/JavaFX.png', 'img/JavaFX.png'],
                 tech: ['Java', 'JavaFX', 'MySQL', 'MVC', 'JDBC', 'Scene Builder'],
-<<<<<<< Updated upstream
-                context: 'Application de gestion complète pour événements sportifs développée dans le cadre d\'un projet universitaire. L\'application permet la gestion des participants, des résultats, de la logistique et génère automatiquement les rapports et statistiques de l\'événement.',
-                role: 'Architecture complète en pattern MVC, développement de l\'interface utilisateur moderne avec JavaFX et CSS, conception et implémentation de la base de données MySQL avec relations complexes, création du système CRUD complet, et mise en place de tests unitaires pour les composants critiques.',
-                github: 'https://gricad-gitlab.univ-grenoble-alpes.fr/iut2-info-stud/2025-s2/r2.01.03/d2/kiouazan'
-=======
                 context: {
                     fr: 'Application de gestion complète pour événements sportifs développée dans le cadre d\'un projet universitaire. L\'application permet la gestion des participants, des épreuves, des résultats et des classements en temps réel.',
                     en: 'Complete management application for sporting events developed as part of a university project. The application enables participant, event, result and ranking management in real-time.'
@@ -179,19 +159,12 @@ class ProjectsSystem {
                     en: 'Team of 3 developers — Interface / Database / Business logic split. Pair integration via Git, code reviews between members.'
                 },
                 skills_acquired: ['Pattern MVC Java', 'JavaFX / Scene Builder', 'JDBC / MySQL', 'Conception BDD normalisée', 'Synchronisation temps réel', 'Gestion d\'événements complexes']
->>>>>>> Stashed changes
             },
             web: {
                 title: 'Site Hardis Group',
                 category: 'Développement Web',
                 year: '2024',
                 images: ['img/Hardis.png', 'img/Hardis.png'],
-<<<<<<< Updated upstream
-                tech: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'Responsive Design', 'Git'],
-                context: 'Création d\'un site web institutionnel éducatif présentant l\'entreprise Hardis Group et sa démarche de transition écologique. Le site est conçu pour être accessible à un jeune public tout en maintenant un niveau professionnel d\'information et de design.',
-                role: 'Développement frontend complet avec HTML5/CSS3, implémentation de l\'interactivité JavaScript, création d\'un design responsive mobile-first, intégration de formulaires de contact avec validation PHP, optimisation des performances et SEO, et déploiement sur serveur web.',
-                github: 'https://github.com/Jolly-Ak/Hardis-Group'
-=======
                 tech: ['HTML5', 'CSS3', 'JavaScript', 'UI Design', 'Responsive', 'Git'],
                 context: {
                     fr: 'Création d\'un prototype d\'interface présentant l\'entreprise Hardis Group et sa démarche de transition écologique. Site vitrine avec animations et éléments interactifs.',
@@ -208,7 +181,6 @@ class ProjectsSystem {
                 github: 'https://github.com/Jolly-Ak/Hardis-Group',
                 teamwork: null,
                 skills_acquired: ['HTML5 sémantique', 'CSS3 animations', 'JavaScript vanilla', 'Design responsive mobile-first', 'Optimisation Lighthouse', 'Accessibilité web']
->>>>>>> Stashed changes
             },
             game: {
                 title: 'Sort Game',
@@ -216,24 +188,6 @@ class ProjectsSystem {
                 year: '2023',
                 images: ['img/sortgame.png', 'img/sortgame.png'],
                 tech: ['Python', 'Tkinter', 'POO', 'Algorithmes', 'Event-Driven'],
-<<<<<<< Updated upstream
-                context: 'Jeu de réflexion et de stratégie développé en Python utilisant la bibliothèque Tkinter pour l\'interface graphique. Le jeu propose des défis de tri et de résolution de puzzles avec différents niveaux de difficulté et un système de scores.',
-                role: 'Conception de la logique du jeu en programmation orientée objet, développement de l\'interface graphique interactive avec Tkinter, implémentation du système de gestion des niveaux et des scores, création d\'algorithmes de génération de puzzles, et mise en place d\'un système de sauvegarde des progressions.',
-                github: 'https://github.com/Jolly-Ak/SortGame'
-            },
-            weave: {
-                title: 'Weave - Plateforme de Soins',
-                category: 'Full Stack Web & Mobile',
-                year: '2025',
-                // Assure-toi que ces images sont bien dans ton dossier img/
-                images: ['img/weave_dashboard.png', 'img/weave_arch.png', 'img/weave_cicd.png'],
-                tech: ['React', 'Node.js', 'PostgreSQL', 'Docker', 'Azure', 'Socket.IO', 'CI/CD'],
-                context: 'Face au vieillissement de la population, Weave centralise la coordination du maintien à domicile. C\'est une plateforme collaborative (Web & Mobile) qui connecte aidants, familles et bénévoles autour d\'un agenda partagé, d\'un système d\'incidents temps réel et d\'une messagerie sécurisée, remplaçant les échanges fragmentés par une solution structurée.',
-                role: 'Founder & Lead Developer. Conception de l\'architecture micro-services et de la base de données PostgreSQL. Mise en place du pipeline CI/CD (GitHub Actions -> Azure). Développement du backend (Express/Socket.IO) et de la logique de synchronisation temps réel. Coordination de l\'équipe mobile (React Native/Capacitor).',
-                github: 'https://github.com/anaskiouaz/WEAVE'
-        },
-            
-=======
                 context: {
                     fr: 'Jeu de réflexion et de stratégie développé en Python utilisant la bibliothèque Tkinter pour l\'interface graphique. Système de scoring et de niveaux progressifs.',
                     en: 'Puzzle and strategy game developed in Python using Tkinter library for the graphical interface. Scoring system and progressive levels.'
@@ -250,7 +204,6 @@ class ProjectsSystem {
                 teamwork: null,
                 skills_acquired: ['POO Python', 'Tkinter / GUI event-driven', 'Design patterns Factory & Observer', 'Algorithmes de tri', 'Gestion d\'état de jeu', 'Optimisation 60fps']
             }
->>>>>>> Stashed changes
         };
         
         this.modal = null;
@@ -310,6 +263,12 @@ class ProjectsSystem {
         });
     }
 
+    getTranslatedValue(value, lang) {
+        if (!value) return '';
+        if (typeof value === 'string') return value;
+        return value[lang] || value['fr'] || '';
+    }
+
     openModal(projectId) {
         const project = this.projectData[projectId];
         if (!project) return;
@@ -327,24 +286,18 @@ class ProjectsSystem {
     }
 
     populateModal(project) {
+        const lang = document.documentElement.lang || 'fr';
         const category = this.modal.querySelector('.modal-category');
         const year = this.modal.querySelector('.modal-year');
         const title = this.modal.querySelector('.modal-title');
         const techStack = this.modal.querySelector('.modal-tech-stack');
         const context = this.modal.querySelector('.modal-context');
-        const role = this.modal.querySelector('.modal-role');
+        const roleEl = this.modal.querySelector('.modal-role');
         const githubLink = this.modal.querySelector('.modal-btn-github');
         const gallery = this.modal.querySelector('.modal-gallery');
         
-        category.textContent = project.category;
+        category.textContent = this.getTranslatedValue(project.category, lang);
         year.textContent = project.year;
-<<<<<<< Updated upstream
-        title.textContent = project.title;
-        context.textContent = project.context;
-        role.textContent = project.role;
-        githubLink.href = project.github;
-        
-=======
         title.textContent = this.getTranslatedValue(project.title, lang);
         context.textContent = this.getTranslatedValue(project.context, lang);
 
@@ -377,20 +330,19 @@ class ProjectsSystem {
             githubLink.style.opacity = '0.4';
         }
 
->>>>>>> Stashed changes
         techStack.innerHTML = project.tech
             .map(tech => `<span>${tech}</span>`)
             .join('');
         
         gallery.innerHTML = project.images
-            .map(image => `<img src="${image}" alt="${project.title}" class="gallery-image">`)
+            .map(image => `<img src="${image}" alt="${this.getTranslatedValue(project.title, lang)}" class="gallery-image">`)
             .join('');
         
         const galleryImages = gallery.querySelectorAll('.gallery-image');
         galleryImages.forEach(img => {
             img.addEventListener('click', (e) => {
                 e.stopPropagation();
-                this.openFullscreen(img.src, project.title);
+                this.openFullscreen(img.src, this.getTranslatedValue(project.title, lang));
             });
         });
     }
@@ -436,5 +388,5 @@ class ProjectsSystem {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new ProjectsSystem();
+    window.projectsSystem = new ProjectsSystem();
 });
