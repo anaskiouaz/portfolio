@@ -825,6 +825,16 @@ a {
     transform: translateY(-2px);
 }
 
+.modal-actions a.modal-btn-github {
+    background: transparent;
+    border: 1px solid var(--border);
+}
+
+.modal-actions a.modal-btn-github:hover {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: var(--accent);
+}
+
 .modal-gallery {
     display: grid;
     gap: 1rem;
@@ -1770,3 +1780,325 @@ button:focus-visible,
         display: none;
     }
 }
+
+/* ============================================
+   BUT COMPETENCES SECTION
+   ============================================ */
+
+/* Légende */
+.skills-legend {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(59, 130, 246, 0.06);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legend-dot--knowledge {
+    background: #f59e0b;
+    box-shadow: 0 0 6px rgba(245, 158, 11, 0.5);
+}
+
+.legend-dot--skill {
+    background: #22c55e;
+    box-shadow: 0 0 6px rgba(34, 197, 94, 0.5);
+}
+
+/* Grille des compétences */
+.but-competences-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 900px) {
+    .but-competences-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Carte compétence */
+.but-competence-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.but-competence-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.but-competence-card:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.08);
+}
+
+.but-competence-card:hover::before {
+    opacity: 1;
+}
+
+/* Accent couleur par numéro de compétence */
+.but-competence-card[data-comp="1"] { --comp-color: #3b82f6; }
+.but-competence-card[data-comp="2"] { --comp-color: #8b5cf6; }
+.but-competence-card[data-comp="3"] { --comp-color: #06b6d4; }
+.but-competence-card[data-comp="4"] { --comp-color: #22c55e; }
+.but-competence-card[data-comp="5"] { --comp-color: #f59e0b; }
+.but-competence-card[data-comp="6"] { --comp-color: #ec4899; }
+
+.but-competence-card::before {
+    background: linear-gradient(90deg, transparent, var(--comp-color, var(--accent)), transparent);
+}
+
+/* En-tête carte */
+.but-comp-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.but-comp-number {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--comp-color, var(--accent));
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-color: rgba(var(--comp-color, 59 130 246) / 0.25);
+    border-radius: 8px;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+}
+
+.but-comp-title-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.but-comp-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.but-comp-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 0.2em 0.7em;
+    border-radius: 50px;
+    background: rgba(59, 130, 246, 0.12);
+    color: var(--comp-color, var(--accent));
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    width: fit-content;
+}
+
+.but-comp-badge--core {
+    background: rgba(59, 130, 246, 0.18);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.but-comp-icon {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    color: var(--comp-color, var(--accent));
+    opacity: 0.7;
+}
+
+.but-comp-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Corps : 2 colonnes */
+.but-comp-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+    .but-comp-body {
+        grid-template-columns: 1fr;
+    }
+}
+
+.but-comp-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.but-comp-col-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+/* Listes connaissances/compétences */
+.but-comp-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.but-comp-list li {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    padding-left: 1.1rem;
+    position: relative;
+}
+
+.but-comp-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.45em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #f59e0b;
+    opacity: 0.8;
+}
+
+.but-comp-list--skill li::before {
+    background: #22c55e;
+}
+
+/* Listes plus denses (langages & outils) */
+.but-comp-list:not(.but-comp-list--skill) li {
+    font-size: 0.78rem;
+    gap: 0.3rem;
+    line-height: 1.4;
+}
+
+/* --- Badge confidentiel dans la modale projet --- */
+.modal-confidential-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.6rem 1.1rem;
+    border-radius: 8px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #f59e0b;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    cursor: default;
+    user-select: none;
+}
+
+.modal-confidential-badge svg {
+    flex-shrink: 0;
+    opacity: 0.9;
+}
+
+
+/* Tags technos */
+.but-comp-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+}
+
+.but-comp-techs span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.25em 0.7em;
+    border-radius: 50px;
+    background: rgba(59, 130, 246, 0.08);
+    color: var(--text-tertiary);
+    border: 1px solid var(--border);
+    letter-spacing: 0.02em;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.but-competence-card:hover .but-comp-techs span {
+    color: var(--comp-color, var(--accent));
+    border-color: rgba(59, 130, 246, 0.25);
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* Scroll reveal for BUT cards */
+.but-competence-card[data-scroll-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.5s var(--ease-smooth), transform 0.5s var(--ease-smooth), border-color 0.3s, box-shadow 0.3s;
+}
+
+.but-competence-card[data-scroll-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Décalage d'animation en cascade */
+.but-competence-card[data-comp="1"] { transition-delay: 0.05s; }
+.but-competence-card[data-comp="2"] { transition-delay: 0.1s; }
+.but-competence-card[data-comp="3"] { transition-delay: 0.15s; }
+.but-competence-card[data-comp="4"] { transition-delay: 0.2s; }
+.but-competence-card[data-comp="5"] { transition-delay: 0.25s; }
+.but-competence-card[data-comp="6"] { transition-delay: 0.3s; }
+

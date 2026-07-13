@@ -13,7 +13,7 @@ class I18n {
                 'nav.projects': 'Projets',
                 'nav.skills': 'Expertise',
                 'nav.contact': 'Contact',
-                'nav.cv': 'Télécharger mon CV',
+                'nav.cv': 'Voir mon CV',
                 'nav.language': 'Langue',
 
                 // Hero Section
@@ -24,7 +24,7 @@ class I18n {
                 'hero.location': 'Python · Java · Symfony · Docker — Étudiant BUT Informatique à Grenoble',
                 'hero.description': 'Étudiant en 2ᵉ année de BUT Informatique à l\'IUT2 de Grenoble. Je conçois des applications backend, des outils data et des automatisations IA, du modèle relationnel à la mise en production conteneurisée. Je cherche une alternance à partir de septembre 2026, rythme 3 semaines entreprise / 1 semaine école.',
                 'hero.btn-projects': 'Découvrir mes projets',
-                'hero.btn-cv': 'Télécharger CV',
+                'hero.btn-cv': 'Voir mon CV',
                 'hero.btn-contact': 'Entrer en contact',
                 'hero.stat-projects': 'Projets Réalisés',
                 'hero.stat-diploma': 'Diplôme BUT',
@@ -55,6 +55,8 @@ class I18n {
                 'about.education-value': 'BUT Informatique (IUT2)',
                 'about.availability-label': 'Disponibilité',
                 'about.availability-value': 'Alternance septembre 2026',
+                'about.license': 'Permis',
+                'about.license-value': 'Permis B ',
 
                 // Projects Section
                 'projects.title': 'Projets Sélectionnés',
@@ -63,12 +65,89 @@ class I18n {
                 'projects.context': 'Contexte',
                 'projects.role': 'Mon Rôle',
                 'projects.github': 'Voir sur GitHub',
+                'projects.report': 'Lire le mémoire',
 
                 // Skills Section
-                'skills.title': 'Expertise Technique',
+                'skills.title': 'Compétences BUT Informatique',
                 'skills.section-number': '03',
-                'skills.subtitle': 'IA, data et développement d\'applications',
+                'skills.subtitle': 'Parcours Développement d\'Application — 6 compétences du référentiel national',
                 'skills.languages': 'Langues',
+                'skills.knowledge': 'Langages & Outils',
+                'skills.competence': 'Compétences',
+                'skills.legend-knowledge': 'Langages & Outils utilisés dans mes projets',
+                'skills.legend-skill': 'Compétences — savoir-faire pratiques démontrés',
+
+                // Compétence 1 — Réaliser un développement d'application
+                'comp1.title': 'Réaliser un développement d\'application',
+                'comp1.badge': 'Cœur de métier',
+                'comp1.k1': 'Algorithmique et structures de données',
+                'comp1.k2': 'Paradigmes de programmation (POO, fonctionnel)',
+                'comp1.k3': 'Patrons de conception (MVC, Repository…)',
+                'comp1.k4': 'Qualité logicielle & tests (unitaires, E2E)',
+                'comp1.s1': 'Développer en Java (JavaFX, JDBC) et Python',
+                'comp1.s2': 'Concevoir et implémenter des API REST (Symfony)',
+                'comp1.s3': 'Rédiger des tests automatisés (Cypress, Espresso)',
+                'comp1.s4': 'Appliquer des patrons MVC sur projets réels',
+
+                // Compétence 2 — Optimiser des applications
+                'comp2.title': 'Optimiser des applications informatiques',
+                'comp2.badge': 'Performance',
+                'comp2.k1': 'Complexité algorithmique (O-notation)',
+                'comp2.k2': 'Optimisation de requêtes SQL (index, plans)',
+                'comp2.k3': 'Algorithmes d\'apprentissage machine (KNN, K-Means)',
+                'comp2.k4': 'Réseaux de neurones convolutifs (CNN)',
+                'comp2.s1': 'Classifier des données avec KNN et TF-IDF',
+                'comp2.s2': 'Entraîner un CNN (TensorFlow/Keras)',
+                'comp2.s3': 'Normaliser un schéma relationnel en 3FN',
+                'comp2.s4': 'Profiler et réduire les goulets d\'étranglement',
+
+                // Compétence 3 — Administrer des systèmes
+                'comp3.title': 'Administrer des systèmes informatiques communicants',
+                'comp3.badge': 'Infrastructure',
+                'comp3.k1': 'Protocoles réseau (HTTP/S, TCP/IP, DNS)',
+                'comp3.k2': 'Systèmes Linux (shell, droits, services)',
+                'comp3.k3': 'Conteneurisation & orchestration (Docker)',
+                'comp3.k4': 'Architecture client-serveur et API REST',
+                'comp3.s1': 'Déployer une stack multi-conteneurs (Docker Compose)',
+                'comp3.s2': 'Configurer Nginx comme reverse proxy',
+                'comp3.s3': 'Mettre en place un pipeline CI/CD (GitHub Actions)',
+                'comp3.s4': 'Gérer l\'environnement de production conteneurisé',
+
+                // Compétence 4 — Gérer les données
+                'comp4.title': 'Gérer les données de l\'information',
+                'comp4.badge': 'Data',
+                'comp4.k1': 'Modélisation relationnelle (MCD, MLD, 3FN)',
+                'comp4.k2': 'Langage SQL avancé (jointures, agrégats, vues)',
+                'comp4.k3': 'Traitement de données (Pandas, NumPy)',
+                'comp4.k4': 'Visualisation et exploration (DataViz)',
+                'comp4.s1': 'Concevoir et normaliser des BDD (PostgreSQL, MySQL)',
+                'comp4.s2': 'Écrire des requêtes SQL complexes et optimisées',
+                'comp4.s3': 'Nettoyer et transformer des jeux de données (Pandas)',
+                'comp4.s4': 'Produire des analyses et visualisations exploratoires',
+
+                // Compétence 5 — Conduire un projet
+                'comp5.title': 'Conduire un projet',
+                'comp5.badge': 'Gestion de projet',
+                'comp5.k1': 'Méthodes agiles (Scrum, sprints, rétrospectives)',
+                'comp5.k2': 'Gestion du backlog et priorisation',
+                'comp5.k3': 'Outils de versionnement (Git, GitHub)',
+                'comp5.k4': 'Documentation technique et livrables',
+                'comp5.s1': 'Piloter une équipe de 6 développeurs (chef de projet)',
+                'comp5.s2': 'Planifier et suivre des sprints en méthode agile',
+                'comp5.s3': 'Versionner et coordonner via Git/GitHub',
+                'comp5.s4': 'Livrer une documentation claire à chaque sprint',
+
+                // Compétence 6 — Travailler en équipe
+                'comp6.title': 'Travailler dans une équipe informatique',
+                'comp6.badge': 'Collaboration',
+                'comp6.k1': 'Communication technique en équipe pluridisciplinaire',
+                'comp6.k2': 'Revue de code et bonnes pratiques collaboratives',
+                'comp6.k3': 'Conventions de nommage & clean code',
+                'comp6.k4': 'Résolution de conflits Git en équipe',
+                'comp6.s1': 'Collaborer efficacement sur des dépôts partagés',
+                'comp6.s2': 'Participer et animer des réunions de sprint',
+                'comp6.s3': 'Adapter son niveau de communication (tech/non-tech)',
+                'comp6.s4': 'Contribuer à un projet primé en équipe (WEAVE 🏆)',
 
                 // Languages
                 'lang.french': 'Français',
@@ -118,7 +197,7 @@ class I18n {
                 'nav.projects': 'Projects',
                 'nav.skills': 'Expertise',
                 'nav.contact': 'Contact',
-                'nav.cv': 'Download CV',
+                'nav.cv': 'View my CV',
                 'nav.language': 'Language',
 
                 // Hero Section
@@ -129,7 +208,7 @@ class I18n {
                 'hero.location': 'Python · Java · Symfony · Docker — BUT Computer Science student in Grenoble',
                 'hero.description': '2nd-year BUT Computer Science student at IUT2 Grenoble. I build backend applications, data tools and AI automations, from relational modeling to containerized production. Looking for an apprenticeship from September 2026, rhythm 3 weeks company / 1 week school.',
                 'hero.btn-projects': 'Discover my projects',
-                'hero.btn-cv': 'Download CV',
+                'hero.btn-cv': 'View my CV',
                 'hero.btn-contact': 'Get in touch',
                 'hero.stat-projects': 'Projects Completed',
                 'hero.stat-diploma': 'BUT Diploma',
@@ -160,6 +239,8 @@ class I18n {
                 'about.education-value': 'BUT Computer Science (IUT2)',
                 'about.availability-label': 'Availability',
                 'about.availability-value': 'Apprenticeship September 2026',
+                'about.license': 'Driving Licence',
+                'about.license-value': 'Category B ',
 
                 // Projects Section
                 'projects.title': 'Selected Projects',
@@ -168,12 +249,89 @@ class I18n {
                 'projects.context': 'Context',
                 'projects.role': 'My Role',
                 'projects.github': 'View on GitHub',
+                'projects.report': 'Read Stage Report',
 
                 // Skills Section
-                'skills.title': 'Technical Expertise',
+                'skills.title': 'BUT Computer Science Skills',
                 'skills.section-number': '03',
-                'skills.subtitle': 'AI, data and application development',
+                'skills.subtitle': 'Application Development Track — 6 national programme competencies',
                 'skills.languages': 'Languages',
+                'skills.knowledge': 'Languages & Tools',
+                'skills.competence': 'Skills',
+                'skills.legend-knowledge': 'Languages & Tools used in my projects',
+                'skills.legend-skill': 'Skills — practical know-how demonstrated',
+
+                // Competency 1 — Build applications
+                'comp1.title': 'Build application software',
+                'comp1.badge': 'Core skill',
+                'comp1.k1': 'Algorithms and data structures',
+                'comp1.k2': 'Programming paradigms (OOP, functional)',
+                'comp1.k3': 'Design patterns (MVC, Repository…)',
+                'comp1.k4': 'Software quality & testing (unit, E2E)',
+                'comp1.s1': 'Develop in Java (JavaFX, JDBC) and Python',
+                'comp1.s2': 'Design and implement REST APIs (Symfony)',
+                'comp1.s3': 'Write automated tests (Cypress, Espresso)',
+                'comp1.s4': 'Apply MVC patterns on real-world projects',
+
+                // Competency 2 — Optimise applications
+                'comp2.title': 'Optimise computer applications',
+                'comp2.badge': 'Performance',
+                'comp2.k1': 'Algorithmic complexity (O-notation)',
+                'comp2.k2': 'SQL query optimisation (indexes, plans)',
+                'comp2.k3': 'Machine learning algorithms (KNN, K-Means)',
+                'comp2.k4': 'Convolutional neural networks (CNN)',
+                'comp2.s1': 'Classify data using KNN and TF-IDF',
+                'comp2.s2': 'Train a CNN (TensorFlow/Keras)',
+                'comp2.s3': 'Normalise a relational schema to 3NF',
+                'comp2.s4': 'Profile and eliminate performance bottlenecks',
+
+                // Competency 3 — Administer systems
+                'comp3.title': 'Administer complex communicating systems',
+                'comp3.badge': 'Infrastructure',
+                'comp3.k1': 'Network protocols (HTTP/S, TCP/IP, DNS)',
+                'comp3.k2': 'Linux systems (shell, permissions, services)',
+                'comp3.k3': 'Containerisation & orchestration (Docker)',
+                'comp3.k4': 'Client-server architecture and REST APIs',
+                'comp3.s1': 'Deploy a multi-container stack (Docker Compose)',
+                'comp3.s2': 'Configure Nginx as a reverse proxy',
+                'comp3.s3': 'Set up a CI/CD pipeline (GitHub Actions)',
+                'comp3.s4': 'Manage containerised production environments',
+
+                // Competency 4 — Manage data
+                'comp4.title': 'Manage information data',
+                'comp4.badge': 'Data',
+                'comp4.k1': 'Relational modelling (ERD, logical model, 3NF)',
+                'comp4.k2': 'Advanced SQL (joins, aggregates, views)',
+                'comp4.k3': 'Data processing (Pandas, NumPy)',
+                'comp4.k4': 'Visualisation and exploration (DataViz)',
+                'comp4.s1': 'Design and normalise databases (PostgreSQL, MySQL)',
+                'comp4.s2': 'Write complex and optimised SQL queries',
+                'comp4.s3': 'Clean and transform datasets (Pandas)',
+                'comp4.s4': 'Produce exploratory analyses and visualisations',
+
+                // Competency 5 — Lead a project
+                'comp5.title': 'Lead a software project',
+                'comp5.badge': 'Project management',
+                'comp5.k1': 'Agile methods (Scrum, sprints, retrospectives)',
+                'comp5.k2': 'Backlog management and prioritisation',
+                'comp5.k3': 'Version control tools (Git, GitHub)',
+                'comp5.k4': 'Technical documentation and deliverables',
+                'comp5.s1': 'Lead a team of 6 developers (project manager)',
+                'comp5.s2': 'Plan and track sprints using agile methods',
+                'comp5.s3': 'Version and coordinate via Git/GitHub',
+                'comp5.s4': 'Deliver clear documentation at each sprint',
+
+                // Competency 6 — Work in a team
+                'comp6.title': 'Work within an IT team',
+                'comp6.badge': 'Collaboration',
+                'comp6.k1': 'Technical communication in cross-functional teams',
+                'comp6.k2': 'Code review and collaborative best practices',
+                'comp6.k3': 'Naming conventions & clean code',
+                'comp6.k4': 'Resolving Git conflicts within a team',
+                'comp6.s1': 'Collaborate effectively on shared repositories',
+                'comp6.s2': 'Participate in and facilitate sprint meetings',
+                'comp6.s3': 'Adapt communication level (tech/non-tech)',
+                'comp6.s4': 'Contribute to an award-winning team project (WEAVE 🏆)',
 
                 // Languages
                 'lang.french': 'French',

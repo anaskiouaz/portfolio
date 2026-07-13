@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventMiner — Mémoire de stage | Anas KIOUAZ</title>
+    <meta name="description" content="Mémoire de stage de Anas Kiouaz à l'IUT 2 Grenoble. Conception et développement d'EventMiner chez Wirepas France : automatisation de la qualification de prospects B2B via Playwright, Claude API et HubSpot.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <style>
+        .report-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .report-section:last-child {
+            border-bottom: none;
+        }
+        .subsection-title-report {
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        .meta-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .meta-title-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-tertiary);
+            margin-bottom: 0.25rem;
+        }
+        .meta-content-value {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        .alert-box {
+            border-left: 4px solid var(--accent);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1.2rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+        .toc-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+        .toc-list li {
+            margin-bottom: 0.5rem;
+        }
+        .toc-list a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            transition: color var(--duration-fast);
+        }
+        .toc-list a:hover {
+            color: var(--accent);
+        }
+        .toc-sublist {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.25rem;
+        }
+        .glossary-term {
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 1rem;
+        }
+        .glossary-def {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-glass">
+        <div class="nav-inner">
+            <div class="logo-container">
+                <a href="../index.html" style="text-decoration: none;">
+                    <span class="logo-mark">AK</span>
+                </a>
+                <span class="logo-subtitle">Dev &amp; Data</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Accueil</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projets</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <a href="../cv/CV-Anas-KIOUAZ.pdf" target="_blank" download class="cta-nav">
+                <span>Télécharger mon CV</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero-section" style="min-height: auto; padding: 9rem 2rem 3rem;">
+        <div class="container-fluid">
+            <div class="section-header">
+                <span class="section-number">STAGE DE FIN D'ÉTUDES · IUT 2 GRENOBLE · 2026</span>
+                <h1 class="section-title-large">Mémoire de stage — EventMiner</h1>
+                <p class="section-subtitle">Application IA automatisant la collecte, l'enrichissement et la notation de prospects B2B chez Wirepas France.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-narrative" style="padding-top: 0;">
+        <div class="container-fluid">
+            <div style="margin-bottom: 3rem;">
+                <img src="../img/wirepas/Capture d'écran 2026-07-13 173744.png" alt="EventMiner Interface Utilisateur" style="width: 100%; border-radius: 20px; border: 1px solid var(--border);">
+            </div>
+
+            <div class="about-grid" style="grid-template-columns: 1.8fr 1fr;">
+                <div class="about-story">
+                    <!-- Page de Garde Metadata -->
+                    <div class="meta-box">
+                        <h2 style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.2rem; color: var(--accent);">Fiche d'identification</h2>
+                        <div class="meta-grid">
+                            <div>
+                                <div class="meta-title-label">Établissement</div>
+                                <div class="meta-content-value">Département Informatique - IUT 2 Grenoble</div>
+                            </div>
+                            <div>
+                                <div class="meta-title-label">Année Universitaire</div>
+                                <div class="meta-content-value">2025-2026</div>
+                            </div>
+                            <div>
+                                <div class="meta-title-label">Auteur</div>
+                                <div class="meta-content-value">Anas Kiouaz</div>
+                            </div>
+                            <div>
+                                <div class="meta-title-label">Entreprise d'accueil</div>
+                                <div class="meta-content-value">Wirepas France</div>
+                            </div>
+                            <div>
+                                <div class="meta-title-label">Tuteur pédagogique</div>
+                                <div class="meta-content-value">M. Carl Vincent</div>
+                            </div>
+                            <div>
+                                <div class="meta-title-label">Membres du jury</div>
+                                <div class="meta-content-value">Carl Vincent, Gaëlle Blanco Lainé, Eden Suire</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-section">
+                        <h2 class="story-title">Déclaration de respect des droits d’auteurs</h2>
+                        <p style="font-style: italic;">
+                            Par la présente, je déclare être le seul auteur de ce rapport et assure qu’aucune autre ressource que celles indiquées n’ont été utilisées pour la réalisation de ce travail. Tout emprunt (citation ou référence) littéral ou non à des documents publiés ou inédits est référencé comme tel et tout usage à un outil doté d’IA a été mentionné et sera de ma responsabilité.<br>
+                            Je suis informé qu’en cas de flagrant délit de fraude, les sanctions prévues dans le règlement des études en cas de fraude aux examens par application du décret 92-657 du 13 juillet 1992 peuvent s’appliquer. Elles seront décidées par la commission disciplinaire de l’UGA.
+                        </p>
+                    </div>
+
+                    <div class="report-section">
+                        <h2 class="story-title">Remerciements</h2>
+                        <p>
+                            Je souhaite remercier M. Eden Suire, mon tuteur d’entreprise. Au-delà de sa confiance, j'ai grandement apprécié son accompagnement tout au long de cette mission. Nos échanges réguliers et ses conseils m'ont permis de prendre de vraies responsabilités sur le projet EventMiner, tout en me faisant progresser techniquement et professionnellement.<br><br>
+                            Je remercie également M. Carl Vincent, mon tuteur au sein du département Informatique de l'IUT 2 de Grenoble, pour son suivi pédagogique, son soutien et ses retours constructifs qui ont contribué à enrichir ce mémoire.<br><br>
+                            Je souhaite par ailleurs adresser mes remerciements à l'ensemble de l'équipe de Wirepas France pour l'accueil chaleureux qui m'a été réservé, la bonne ambiance de travail et la richesse des échanges que nous avons pu avoir au quotidien.<br><br>
+                            Enfin, je remercie l'IUT 2 de Grenoble et plus particulièrement le département Informatique pour la qualité de la formation dispensée au cours de cette année universitaire 2025-2026, qui m'a fourni les bases solides nécessaires à la réalisation de ce stage.
+                        </p>
+                        <p style="margin-top: 1rem; text-align: right; font-weight: 500;">
+                            Fait à Grenoble, le 09/06/2026
+                        </p>
+                    </div>
+
+                    <div class="report-section" id="resume">
+                        <h2 class="story-title">Résumé</h2>
+                        <p>
+                            Le projet <strong>EventMiner</strong> est une application web interne développée au sein de la filiale française de <strong>Wirepas</strong>, leader mondial des solutions de connectivité mesh pour l'IoT industriel. L'objectif principal de ce travail consiste à automatiser intégralement le processus de prospection et de préparation des salons professionnels (représentant environ 12 événements annuels pour l'entreprise). Auparavant, l'identification, la qualification et la saisie des exposants pertinents exigeaient trois jours de traitement manuel par les équipes commerciales. EventMiner remplace ce flux fragmenté par un pipeline logiciel automatisé.<br><br>
+                            Le cycle de traitement de l'application s'articule autour de quatre modules majeurs : la collecte automatisée des données des exposants (via le framework de scraping Playwright ou par import de fichiers), l'enrichissement firmographique sémantique, la notation automatisée par une intelligence artificielle (basée sur l'API Claude d'Anthropic), et l'intégration directe par lots au sein du CRM HubSpot de l'entreprise. Développée sur une architecture moderne reposant sur Node.js, TypeScript, Express et Prisma (SQLite) pour la partie serveur, et React avec Tailwind CSS pour l'interface utilisateur, l'application est entièrement conteneurisée sous Docker. Le respect des exigences de qualité logicielle est assuré par une suite de 154 tests unitaires et d'intégration validés en intégration continue via GitHub Actions, atteignant une couverture de code supérieure à 80 %. Le produit minimal viable (MVP) livré remplit tous les critères de succès fixés : élimination des doublons CRM, haute précision algorithmique et réduction drastique du temps opérationnel.
+                        </p>
+                    </div>
+
+                    <div class="report-section">
+                        <h2 class="story-title">Table des matières</h2>
+                        <ul class="toc-list">
+                            <li><a href="#resume">Résumé</a></li>
+                            <li><a href="#introduction">I. Introduction</a></li>
+                            <li><a href="#contexte">II. Présentation du contexte professionnel</a>
+                                <ul class="toc-sublist">
+                                    <li><a href="#contexte-entreprise">II.1. Présentation de l'entreprise</a></li>
+                                    <li><a href="#contexte-stage">II.2. Présentation du stage</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#realisation">III. Présentation de la réalisation</a>
+                                <ul class="toc-sublist">
+                                    <li><a href="#choix-techniques">III.1. Choix techniques</a></li>
+                                    <li><a href="#details-taches">III.2. Détail des tâches</a></li>
+                                    <li><a href="#travail-realise">III.3. Description et explications du travail réalisé</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#conclusion">IV. Conclusion</a>
+                                <ul class="toc-sublist">
+                                    <li><a href="#bilan-technique">IV.1. Bilan technique</a></li>
+                                    <li><a href="#bilan-perso">IV.2. Bilan professionnel et personnel</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#glossaire">Glossaire</a></li>
+                            <li><a href="#references">Références bibliographiques et webographiques</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="report-section" id="introduction">
+                        <h2 class="story-title">I. Introduction</h2>
+                        <p>
+                            Les salons professionnels constituent un canal d'acquisition majeur pour les entreprises B2B du secteur technologique. Pour chacun d'eux, les équipes commerciales doivent toutefois passer par une phase de préparation qui consiste à identifier, qualifier et noter la liste des exposants pertinents pour leur entreprise. Ces salons comptent fréquemment plusieurs centaines, voire plusieurs milliers d'entreprises listées principalement sur des sites web. Au sein de Wirepas, ce processus administratif et chronophage privait les équipes commerciales d'un temps précieux, qui aurait pu être alloué à des tâches à plus forte valeur ajoutée.<br><br>
+                            Réalisé chez Wirepas France du 21 avril au 26 juin 2026, mon stage visait à concevoir et développer une application interne baptisée <strong>EventMiner</strong>. Ce projet a été initié à la demande directe de mon tuteur de stage, M. Eden Suire (Responsable Produit), qui a défini les besoins métiers et m'a fixé un objectif concret : rationaliser ce flux pour réduire le temps de préparation d'un salon de trois jours à moins de 2h. Pour mener à bien cette mission et concevoir une infrastructure parfaitement intégrée au système d'information de l'entreprise, j'ai collaboré étroitement avec plusieurs experts internes : M. Mika Hankakorpi (Responsable IT) pour l'accès aux environnements et modèles de langage, Mme Riikka Palola (Administratrice CRM) pour l'alignement avec les protocoles de HubSpot, ainsi que M. Ceyhun Uzunoglu pour le déploiement et la mise en production du serveur d'hébergement.<br><br>
+                            Ce mémoire présente le contexte du stage, les choix techniques retenus, la réalisation produite et les résultats obtenus à l'issue du projet.
+                        </p>
+                    </div>
+
+                    <div class="report-section" id="contexte">
+                        <h2 class="story-title">II. Présentation du contexte professionnel</h2>
+                        
+                        <div id="contexte-entreprise">
+                            <h3 class="subsection-title-report">II.1. Présentation de l'entreprise</h3>
+                            <p>
+                                Fondée en 2010 et basée à Tampere en Finlande, <strong>Wirepas</strong> est une entreprise technologique de dimension internationale, spécialisée dans la connectivité sans fil pour l'IoT industriel. À travers une structure à taille humaine comptant une centaine de collaborateurs experts répartis en Europe, en Amérique du Nord et en Asie-Pacifique, Wirepas a su déployer sa technologie sur plus de 22 millions d'appareils à travers le monde.<br><br>
+                                Contrairement aux autres entreprises de l’IoT, Wirepas ne fabrique aucun matériel physique. Son offre repose exclusivement sur le développement de logiciels, notamment un protocole de communication réseau conçu pour s'intégrer directement dans les puces électroniques. Cette technologie fonctionne comme un réseau décentralisé et autonome, où chaque appareil connecté agit simultanément comme émetteur, récepteur et routeur. Parmi ses solutions, on retrouve le <em>Wirepas Mesh</em>, permettant de connecter massivement et à très bas coût des millions de capteurs à faible consommation énergétique. Plus récemment, l'entreprise a développé le standard <em>NR+</em>, qui constitue la toute première norme 5G mondiale non cellulaire. Cette innovation majeure permet aux industriels de déployer leurs propres réseaux privés sans dépendre d'un opérateur téléphonique ni de cartes SIM, garantissant ainsi une couverture étendue et une fiabilité de 99,9%.<br><br>
+                                Wirepas opère exclusivement en B2B via un modèle de licences logicielles. La clientèle de l'entreprise se divise en deux grandes catégories (Business Units) : <strong>Smart Tracking</strong> (suivi d'actifs logistiques) et <strong>Smart Metering & Infrastructure</strong> (gestion de réseaux urbains de compteurs communicants). L'entreprise commercialise sa solution auprès d'un vaste écosystème regroupant plus de 200 partenaires technologiques (fabricants de puces, de capteurs, et intégrateurs).
+                            </p>
+                        </div>
+
+                        <div id="contexte-stage">
+                            <h3 class="subsection-title-report">II.2. Présentation du stage</h3>
+                            
+                            <h4 style="color: var(--accent); margin-top: 1rem;">II.2.1. Sujet et objectifs</h4>
+                            <p>
+                                Le projet EventMiner consiste à développer une application interne d'automatisation couvrant cinq étapes clés :
+                            </p>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+                                <li><strong>Collecte :</strong> extraction automatique d'exposants depuis les sites des salons (Playwright) ou imports de fichiers commerciaux (CSV, Excel, JSON).</li>
+                                <li><strong>Enrichissement :</strong> récupération automatique des domaines et informations firmographiques des entreprises.</li>
+                                <li><strong>Notation IA :</strong> attribution automatisée d'un score de pertinence commerciale via un LLM (Claude d'Anthropic).</li>
+                                <li><strong>Intégration CRM :</strong> création automatique d'entreprises et de tâches associées dans HubSpot en évitant les doublons.</li>
+                                <li><strong>Interface utilisateur :</strong> tableau de bord pour piloter les pipelines de traitement et analyser les prospects qualifiés.</li>
+                            </ul>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">II.2.2. Positionnement par rapport à l'existant</h4>
+                            <p>
+                                Avant EventMiner, le traitement reposait exclusivement sur des outils non spécialisés et manuels. L'analyse a fait apparaître trois phases particulièrement chronophages : la collecte web manuelle (huit à neuf heures par salon), l'analyse sémantique et la recherche d'adéquation (huit à neuf heures), et enfin la saisie dans le CRM (cinq à six heures). Au total, cela représentait environ <strong>vingt-quatre heures (3 jours de travail)</strong> à faible valeur ajoutée par événement.<br><br>
+                                Après études et tests de solutions existantes basées sur des API tierces traditionnelles (dont le taux de réussite plafonnait à 75%), l'intégration d'un LLM configuré en interne avec recherche web active s'est avérée financièrement et qualitativement plus robuste, offrant une qualification contextuelle ultra-calibrée sur le segment IoT industriel.
+                            </p>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">II.2.3. Acteurs clés et collaborations internes</h4>
+                            <p>
+                                Le développement a nécessité des collaborations transversales : <strong>Eden Suire</strong> (Product Owner) pour les besoins métiers, <strong>Mika Hankakorpi</strong> (IT Manager) pour les accès infrastructure/API LLM, <strong>Riikka Palola</strong> (CRM Manager) pour l'alignement sur les schémas d'API HubSpot, et <strong>Ceyhun Uzunoglu</strong> pour le déploiement sur les environnements de production AWS de l'entreprise.
+                            </p>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">II.2.4. Cycle de développement et méthodologie Agile</h4>
+                            <p>
+                                Le développement du projet s'est déroulé en cycles agiles hebdomadaires avec le responsable produit. J'ai également participé directement aux réunions bihebdomadaires de l'équipe commerciale internationale, y réalisant deux présentations en anglais (le 27 mai pour introduire l'outil, et le 9 juin pour présenter les résultats mesurables), instaurant ainsi une boucle de rétroaction avec les utilisateurs finaux pour ajuster l'ergonomie.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="report-section" id="realisation">
+                        <h2 class="story-title">III. Présentation de la réalisation</h2>
+
+                        <div id="choix-techniques">
+                            <h3 class="subsection-title-report">III.1. Choix techniques</h3>
+                            <p>
+                                L'architecture de l'application s'appuie sur une démarche agile intégrant des bibliothèques robustes et éprouvées :
+                            </p>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+                                <li><strong>Serveur applicatif :</strong> Node.js 20 &amp; TypeScript 5 avec Express pour le serveur HTTP et Zod pour la validation déclarative des schémas de données.</li>
+                                <li><strong>Base de données :</strong> SQLite embarqué avec l'ORM Prisma, une solution simple et performante par rapport au faible volume (quelques milliers d'entreprises par salon).</li>
+                                <li><strong>Collecte :</strong> Playwright pour le scraping dynamique, capable d'exécuter du JS et de gérer le défilement infini ou l'authentification.</li>
+                                <li><strong>IA &amp; Scoring :</strong> API Anthropic Claude avec activation de la recherche web (Web Search) pour identifier le nom de domaine exact sur le web avant de réaliser la qualification, simplifiant ainsi le pipeline firmographique.</li>
+                                <li><strong>Interface utilisateur :</strong> Single Page Application développée avec React, TypeScript et Vite, synchronisée en temps réel via Socket.IO pour suivre la progression du scraping et du scoring.</li>
+                                <li><strong>Outils transverses :</strong> SDK HubSpot officiel (`@hubspot/api-client`), Vitest et Cypress pour les suites de tests unitaires et E2E.</li>
+                            </ul>
+                        </div>
+
+                        <div id="details-taches">
+                            <h3 class="subsection-title-report">III.2. Détail des tâches</h3>
+                            <p>
+                                Le projet s'est structuré sur 10 semaines de stage, réparties entre la phase de cadrage théorique, le développement successif des modules (scraping, scoring IA, intégration CRM HubSpot, interface utilisateur React) et enfin une phase de fiabilisation avec écriture de tests et déploiement en production sous Docker.
+                            </p>
+                        </div>
+
+                        <div id="travail-realise">
+                            <h3 class="subsection-title-report">III.3. Description et explications du travail réalisé</h3>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">III.3.1. Architecture générale</h4>
+                            <p>
+                                L'architecture EventMiner s'articule autour de quatre modules indépendants formant un pipeline de traitement de données unidirectionnel (Pipeline Architecture) : <strong>Acquisition → Filtrage → Notation IA → Intégration CRM</strong>. Le traitement s'effectue de manière asynchrone par lots (batch processing).
+                            </p>
+                            
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="../img/wirepas_arch_placeholder.svg" alt="Figure 5 : Diagramme de composants et flux de pipeline d'EventMiner" style="max-width: 100%; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-card); padding: 1rem;">
+                                <p style="font-size: 0.8rem; color: var(--text-tertiary); margin-top: 0.5rem;">Figure 5 : Diagramme de composants et flux de pipeline d'EventMiner</p>
+                            </div>
+
+                            <p>
+                                Toute la configuration comportementale de l'application est centralisée dans un fichier <code>app-config.json</code>, qui regroupe les filtres géographiques et concurrentiels, le profil de ciblage de Wirepas, les paramètres de l'IA (choix du LLM, limite de tokens, température), facilitant ainsi la maintenance sans modification du code source.
+                            </p>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">III.3.2. Conception de la base de données</h4>
+                            <p>
+                                La base SQLite utilise un modèle centré sur la table <code>Company</code> contenant 32 colonnes alimentées progressivement. La déduplication automatique intervient en cascade lors de chaque insertion en vérifiant le nom de l'entreprise, le domaine résolu et la résolution HTTP des redirections pour intercepter les alias.
+                            </p>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">III.3.3. Acquisition des données (Scraping &amp; Import)</h4>
+                            <p>
+                                La collecte Playwright implémente le concept original de <strong>"témoin"</strong> : l'utilisateur fournit le nom d'un exposant présent sur le site du salon ; le script analyse l'arbre DOM pour identifier les sélecteurs CSS similaires et extraire automatiquement toute la liste. En cas de blocage anti-scraping persistant, un module d'import de fichiers (CSV, Excel, JSON) mappe intelligemment les colonnes grâce à un algorithme local de fuzzy matching textuel, évitant la latence et le coût d'un appel IA.
+                            </p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="../img/wirepas_sequence.svg" alt="Figure 7 : Diagramme de séquence du module de collecte" style="max-width: 100%; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-card); padding: 1rem;">
+                                <p style="font-size: 0.8rem; color: var(--text-tertiary); margin-top: 0.5rem;">Figure 7 : Diagramme de séquence du module de collecte</p>
+                            </div>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">III.3.4. Enrichissement et notation par intelligence artificielle</h4>
+                            <p>
+                                Pour chaque prospect, la recherche web d'Anthropic résout le nom de domaine exact. L'application envoie ensuite un prompt structuré selon la logique <em>Rubrics as Rewards</em> : le LLM extrait des critères spécifiques dans un format JSON strict (Zod validation avec retries exponentiels). La note finale sur 10 est calculée localement et de façon déterministe par une fonction <code>calculateScore()</code> pour garantir l'auditabilité et la reproductibilité des classements (paliers <strong>HOT, WARM, COLD, Rejected</strong>).
+                            </p>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">III.3.5. Intégration HubSpot CRM</h4>
+                            <p>
+                                La classe <code>CrmService</code> gère la synchronisation de données avec HubSpot. Les requêtes unitaires ont été refactorisées en appels par lots (batch API v3), ramenant le volume de requêtes pour 100 prospects de plus de 300 à seulement 3 (recherche des domaines existants, création des fiches manquantes, association des tâches avec nomenclature standardisée). Cette refonte a divisé le temps de synchronisation par 5, tout en respectant un intervalle de 260ms pour éviter de saturer la limite de l'API HubSpot.
+                            </p>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">III.3.6. Interface utilisateur React</h4>
+                            <p>
+                                Développée avec React et Vite, l'UI comporte trois sections : le <strong>Pipeline</strong> (pour lancer une collecte avec jauge de progression en temps réel), l'<strong>Historique</strong> (pour consulter ou archiver d'anciens salons), et la section <strong>Données</strong> (table de recherche dynamique avec panneau de détails sur la notation IA et le statut CRM de chaque entreprise).
+                            </p>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">III.3.7. Tests et intégration continue</h4>
+                            <p>
+                                La suite de tests compte 154 cas automatisés (Vitest et Cypress) couvrant plus de 80% des instructions du serveur. Le pipeline GitHub Actions automatise à chaque commit la compilation, la génération du schéma Prisma et le lancement des tests. Un système de tests en conditions réelles navigue ponctuellement sur 6 sites de salons tests clés pour valider la robustesse des collecteurs face aux changements de structures web.
+                            </p>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">III.3.8. Hébergement et sécurité</h4>
+                            <p>
+                                L'application est conteneurisée sous Docker Compose (service backend Express + service frontend servi par Nginx jouant le rôle de reverse proxy) et déployée sur un serveur Linux dédié (AWS). Les mesures de sécurité comprennent le chiffrement HTTPS (Let's Encrypt), le middleware Helmet pour les en-têtes de protection, l'isolation des secrets via <code>.env</code>, et une double authentification (SSO Microsoft Entra ID principal / local bcrypt secondaire).
+                            </p>
+
+                            <h4 style="color: var(--accent); margin-top: 1rem;">III.3.9. Résultats obtenus</h4>
+                            <p>
+                                Sur un salon de test représentatif, l'exécution complète d'EventMiner prend <strong>moins de 30 minutes</strong> contre 3 jours auparavant. Le taux de récupération des domaines est supérieur à 95% avec 0 doublon CRM. L'évaluation de l'IA sur 200 sociétés montre <strong>96.25% d'exactitude dans les verdicts de notation</strong> (192 classifications correctes). De plus, EventMiner a détecté deux prospects très prometteurs qui avaient été totalement manqués par les équipes commerciales lors de leur processus manuel traditionnel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="report-section" id="conclusion">
+                        <h2 class="story-title">IV. Conclusion</h2>
+                        
+                        <div id="bilan-technique">
+                            <h3 class="subsection-title-report">IV.1. Bilan technique</h3>
+                            <p>
+                                Le projet EventMiner remplit tous les objectifs du cahier des charges initial. L'architecture modulaire découpée en quatre couches indépendantes a prouvé son efficacité, permettant d'optimiser l'intégration CRM HubSpot en cours de route sans affecter le scraping ou la notation. Les évolutions futures se focaliseront sur l'extraction automatique des coordonnées des décideurs (phase 2 estimée à 5 jours/homme), la généralisation de la notation aux marchés mondiaux (3 jours/homme), et un système d'apprentissage continu basé sur les ajustements manuels des commerciaux (8 jours/homme).
+                            </p>
+                        </div>
+
+                        <div id="bilan-perso">
+                            <h3 class="subsection-title-report">IV.2. Bilan professionnel et personnel</h3>
+                            <p>
+                                Ce stage au sein de Wirepas France a été une expérience de transition idéale vers le monde professionnel. La collaboration directe avec l'équipe commerciale internationale m'a appris à traduire des contraintes métiers en structures logicielles concrètes et à animer des démonstrations techniques en anglais.<br><br>
+                                Sur le plan technique, prendre la responsabilité d'un projet logiciel de sa phase de cadrage à sa mise en production sécurisée sur AWS m'a permis d'acquérir une forte autonomie. La résolution de défis techniques comme la restructuration du pipeline firmographique ou l'optimisation des API par lots a renforcé ma rigueur d'ingénierie et conforté mon attrait pour le développement backend et les architectures de traitement de données.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="report-section" id="glossaire">
+                        <h2 class="story-title">Glossaire</h2>
+                        <div class="glossary-term">CORS (Cross-Origin Resource Sharing)</div>
+                        <div class="glossary-def">Mécanisme de sécurité restreignant les requêtes HTTP d'un navigateur vers un domaine différent de celui de la page d'origine.</div>
+
+                        <div class="glossary-term">CRM (Customer Relationship Management)</div>
+                        <div class="glossary-def">Logiciel de gestion de la relation client, comme HubSpot, utilisé pour stocker et suivre les contacts et les ventes d'une entreprise.</div>
+
+                        <div class="glossary-term">GLEIF (Global Legal Entity Identifier Foundation)</div>
+                        <div class="glossary-def">Organisation internationale permettant d'identifier légalement des entités morales et de tracer les relations groupes/filiales.</div>
+
+                        <div class="glossary-term">IoT (Internet of Things)</div>
+                        <div class="glossary-def">L'Internet des Objets, désignant les capteurs et matériels physiques connectés transmettant des données.</div>
+
+                        <div class="glossary-term">LLM (Large Language Model)</div>
+                        <div class="glossary-def">Grand modèle de langage IA, comme Claude, capable d'analyser, générer et structurer des informations textuelles complexes.</div>
+
+                        <div class="glossary-term">MVP (Minimum Viable Product)</div>
+                        <div class="glossary-def">Produit minimal viable contenant uniquement les fonctionnalités clés pour être testé en production.</div>
+
+                        <div class="glossary-term">ORM (Object-Relational Mapping)</div>
+                        <div class="glossary-def">Outil d'interface (ex. Prisma) facilitant l'accès à une base de données relationnelle en la manipulant comme des objets typés du code source.</div>
+
+                        <div class="glossary-term">SIREN / SIRET</div>
+                        <div class="glossary-def">Numéros uniques d'identification légale d'une entreprise en France, délivrés par l'INSEE.</div>
+
+                        <div class="glossary-term">SSO (Single Sign-On)</div>
+                        <div class="glossary-def">Système d'authentification unique (ex. Microsoft Entra ID) permettant de se connecter à plusieurs outils internes avec un seul compte d'entreprise.</div>
+                    </div>
+
+                    <div class="report-section" id="references">
+                        <h2 class="story-title">Références bibliographiques et webographiques</h2>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <strong>[1] WIREPAS.</strong> Site officiel de l'entreprise : <a href="https://wirepas.com/" target="_blank">https://wirepas.com/</a> (consulté le 22 avril 2026).<br>
+                            <strong>[2] NODE.JS CONTRIBUTORS.</strong> Node.js v20.x Documentation : <a href="https://nodejs.org/docs/" target="_blank">https://nodejs.org/docs/</a> (consulté le 28 avril 2026).<br>
+                            <strong>[3] TYPESCRIPT.</strong> TypeScript 5.x Documentation : <a href="https://www.typescriptlang.org/docs/" target="_blank">https://www.typescriptlang.org/docs/</a> (consulté le 29 avril 2026).<br>
+                            <strong>[4] MICROSOFT PLAYWRIGHT.</strong> Automation framework docs : <a href="https://playwright.dev/" target="_blank">https://playwright.dev/</a> (consulté le 25 avril 2026).<br>
+                            <strong>[5] ANTHROPIC.</strong> Claude API Docs, Structured Outputs &amp; Web Search capabilities : <a href="https://docs.anthropic.com/" target="_blank">https://docs.anthropic.com/</a> (consulté le 10 mai 2026).<br>
+                            <strong>[6] HUBSPOT DEVELOPERS.</strong> CRM Companies API v3 docs : <a href="https://developers.hubspot.com/docs/api/crm/companies" target="_blank">https://developers.hubspot.com/docs/api/crm/companies</a> (consulté le 19 mai 2026).<br>
+                            <strong>[7] DINUM.</strong> API Recherche d'Entreprises (Données SIRENE, RNE, INSEE) : <a href="https://recherche-entreprises.api.gouv.fr/" target="_blank">https://recherche-entreprises.api.gouv.fr/</a> (consulté le 02 mai 2026).
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="about-details">
+                    <div class="details-card">
+                        <div class="detail-row">
+                            <span class="detail-label">Année académique</span>
+                            <span class="detail-value">2025 - 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Rôle de stage</span>
+                            <span class="detail-value">Lead Dev &amp; Architect</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Entreprise</span>
+                            <span class="detail-value">Wirepas France</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Tuteur Entreprise</span>
+                            <span class="detail-value">M. Eden Suire</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Tuteur IUT</span>
+                            <span class="detail-value">M. Carl Vincent</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Durée du stage</span>
+                            <span class="detail-value">10 semaines</span>
+                        </div>
+                    </div>
+
+                    <div class="details-card" style="margin-top: 1.5rem;">
+                        <h3 style="color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1rem;">Stack technique</h3>
+                        <div class="project-tech">
+                            <span>Node.js 20</span>
+                            <span>TypeScript 5</span>
+                            <span>Express.js</span>
+                            <span>Prisma ORM</span>
+                            <span>SQLite</span>
+                            <span>Playwright</span>
+                            <span>Claude API</span>
+                            <span>HubSpot CRM</span>
+                            <span>React</span>
+                            <span>Tailwind CSS</span>
+                            <span>Vite</span>
+                            <span>Docker Compose</span>
+                            <span>Nginx</span>
+                            <span>SSO Entra ID</span>
+                            <span>Vitest</span>
+                            <span>Cypress</span>
+                            <span>GitHub Actions</span>
+                            <span>Prometheus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="../index.html#projects" class="btn-secondary">← Retour aux projets</a>
+                <a href="../index.html#contact" class="btn-primary">Me contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container-fluid">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Anas KIOUAZ. Tous droits réservés.</p>
+                <p class="footer-location">Grenoble, France</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

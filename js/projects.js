@@ -55,29 +55,36 @@ class ProjectsSystem {
             },
             wirepas: {
                 title: {
-                    fr: 'ExpoMiner - Plateforme IA Wirepas',
-                    en: 'ExpoMiner - Wirepas AI Platform'
+                    fr: 'EventMiner — Plateforme IA Wirepas',
+                    en: 'EventMiner — Wirepas AI Platform'
                 },
                 category: {
-                    fr: 'Architecture Logicielle & IA',
-                    en: 'Software Architecture & AI'
+                    fr: 'Mémoire de stage · 2026',
+                    en: 'Stage Report · 2026'
                 },
-                year: '2025',
-                images: ['img/wirepas_sequence.svg', 'img/wirepas_arch_placeholder.svg'],
-                tech: ['Node.js 20', 'TypeScript', 'Express.js', 'SQLite', 'Prisma ORM', 'Playwright', 'React', 'Tailwind', 'APIs Externes (SIRENE/INPI/GLEIF)', 'HubSpot', 'NLP', 'LLM'],
+                year: '2026',
+                images: [
+                    'img/wirepas/Capture d\'écran 2026-07-13 173744.png',
+                    'img/wirepas/Capture d\'écran 2026-07-13 173625.png',
+                    'img/wirepas/Capture d\'écran 2026-07-13 173656.png',
+                    'img/wirepas/Capture d\'écran 2026-07-13 173647.png'
+                ],
+                tech: ['Node.js 20', 'TypeScript 5', 'Express.js', 'SQLite', 'Prisma ORM', 'Playwright', 'React', 'Tailwind CSS', 'Claude API (Anthropic)', 'HubSpot CRM', 'Docker', 'GitHub Actions', 'Vitest', 'Nginx', 'Prometheus'],
                 context: {
-                    fr: 'Développement d\'une plateforme complète (Web + Backend) pour automatiser la qualification de prospects B2B lors de 12+ salons professionnels par an. ExpoMiner réduit le temps de préparation de 3 jours à moins de 30 min via scraping intelligent, enrichissement multi-source et scoring IA. Contexte : Wirepas participe à des salons (Electronica, Smart City Expo, IBS, Enlit) pour identifier des prospects IoT industriels, avec un processus préalablement entièrement manuel (3 j/salon = perte de 36 jours commerciaux par an).',
-                    en: 'Development of a complete platform (Web + Backend) to automate B2B prospect qualification at 12+ trade shows annually. ExpoMiner reduces preparation time from 3 days to <30min via intelligent scraping, multi-source enrichment and AI scoring. Context: Wirepas participates in shows (Electronica, Smart City Expo, IBS, Enlit) to identify industrial IoT prospects, with previously entirely manual process (3 days/show = loss of 36 commercial days/year).'
+                    fr: 'Projet de fin d\'études (mémoire de stage) au département Informatique de l\'IUT 2 de Grenoble. EventMiner est une application IA interne développée pour la filiale française de Wirepas (leader de la connectivité mesh IoT). Elle automatise le pipeline de prospection pour 12 salons professionnels par an, réduisant le temps de préparation commerciale de 3 jours à moins de 30 minutes.',
+                    en: 'Final graduation project (stage report) at the Computer Science department of IUT 2 Grenoble. EventMiner is an internal AI application developed for Wirepas France (global leader in industrial IoT mesh connectivity). It automates the prospect qualification pipeline for 12 annual trade shows, reducing commercial preparation time from 3 days to under 30 minutes.'
                 },
                 role: {
-                    fr: 'Lead Developer & Architect. Conception complète de l\'architecture monorepo TypeScript (Backend Node.js + Frontend React). Orchestration du pipeline end-to-end : (1) Scraping multi-site via Playwright + détection heuristique des sélecteurs CSS, (2) Enrichissement via 8+ APIs (SIRENE/INPI/GLEIF/Wikidata/VIES/Pappers), (3) NLP local (TF-IDF + Embeddings MiniLM-L12-v2), (4) Scoring via LLM, (5) Intégration HubSpot automatisée. Mise en place de l\'infrastructure Docker + CI/CD GitHub Actions. Résultats : 85 % du processus de qualification automatisé, réduction du temps 10h → 30 min/salon (97 % de gain).',
-                    en: 'Lead Developer & Architect. Complete TypeScript monorepo architecture design (Node.js Backend + React Frontend). End-to-end pipeline orchestration: (1) Multi-site scraping via Playwright + heuristic CSS selector detection, (2) Enrichment via 8+ APIs (SIRENE/INPI/GLEIF/Wikidata/VIES/Pappers), (3) Local NLP (TF-IDF + MiniLM-L12-v2 Embeddings), (4) LLM scoring, (5) Automated HubSpot integration. Docker infrastructure + GitHub Actions CI/CD implementation. Results: 85% qualification process automation, time reduction 10h→30min/show (97% gain).'
+                    fr: 'Conception et développement de bout en bout du pipeline de traitement de données :<br>• <strong>Collecte :</strong> Extraction via Playwright (scraping dynamique par sélecteur de référence "témoin") ou import Excel/CSV avec fuzzy matching de colonnes.<br>• <strong>Notation IA :</strong> Enrichissement et notation sémantique par l\'IA avec la recherche web d\'Anthropic Claude API et validation Zod (taux d\'exactitude de 96.25%).<br>• <strong>CRM :</strong> Synchronisation par lots (batch) sur HubSpot CRM divisant le temps de synchronisation par 5.<br>• <strong>Dashboard & DevOps :</strong> Dashboard en React, conteneurisation Docker complète, CI/CD GitHub Actions avec 154 tests unitaires/intégration (>80% de couverture), déploiement AWS avec Nginx reverse proxy et authentification SSO Microsoft Entra ID.',
+                    en: 'End-to-end design and development of the data pipeline:<br>• <strong>Collection:</strong> Extraction via Playwright (dynamic scraping using a witness element) or Excel/CSV import with fuzzy column matching.<br>• <strong>AI Scoring:</strong> Semantic enrichment and scoring via AI using Anthropic Claude API web search and Zod validation (96.25% accuracy rate).<br>• <strong>CRM:</strong> Batch synchronization into HubSpot CRM dividing sync time by 5.<br>• <strong>Dashboard & DevOps:</strong> React dashboard, full Docker containerization, CI/CD GitHub Actions with 154 unit/integration tests (>80% coverage), AWS deployment with Nginx reverse proxy and Microsoft Entra ID SSO.'
                 },
                 description: {
-                    fr: 'Automatisation qualification prospects B2B via scraping, enrichissement et scoring IA',
-                    en: 'B2B prospect qualification automation via scraping, enrichment and AI scoring'
+                    fr: 'Application IA automatisant la collecte, l\'enrichissement et la notation de prospects B2B lors de salons professionnels chez Wirepas France (Mémoire de Stage 2026).',
+                    en: 'AI application automating B2B prospect collection, enrichment, and scoring for trade shows at Wirepas France (Stage Report 2026).'
                 },
-                github: 'https://github.com/anaskiouaz/wirepas-ia-platform'
+                github: null,
+                confidential: true,
+                report: 'projects/eventminer.html'
             },
             ml: {
                 title: {
@@ -347,16 +354,48 @@ class ProjectsSystem {
         const roleContent = this.getTranslatedValue(project.role, lang);
         roleEl.innerHTML = roleContent.replace(/\n/g, '<br>');
 
-        if (project.github) {
-            githubLink.href = project.github;
-            githubLink.classList.remove('disabled');
-            githubLink.style.pointerEvents = '';
-            githubLink.style.opacity = '';
+        if (project.confidential) {
+            githubLink.style.display = 'none';
+            let badge = this.modal.querySelector('.modal-confidential-badge');
+            if (!badge) {
+                badge = document.createElement('div');
+                badge.className = 'modal-confidential-badge';
+                githubLink.parentNode.insertBefore(badge, githubLink);
+            }
+            const isEn = lang === 'en';
+            badge.innerHTML = `
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                <span>${isEn ? 'Confidential — Internship project' : 'Code confidentiel — Projet de stage'}</span>
+            `;
         } else {
-            githubLink.href = '#';
-            githubLink.classList.add('disabled');
-            githubLink.style.pointerEvents = 'none';
-            githubLink.style.opacity = '0.4';
+            const badge = this.modal.querySelector('.modal-confidential-badge');
+            if (badge) badge.remove();
+            githubLink.style.display = '';
+            if (project.github) {
+                githubLink.href = project.github;
+                githubLink.classList.remove('disabled');
+                githubLink.style.pointerEvents = '';
+                githubLink.style.opacity = '';
+            } else {
+                githubLink.href = '#';
+                githubLink.classList.add('disabled');
+                githubLink.style.pointerEvents = 'none';
+                githubLink.style.opacity = '0.4';
+            }
+        }
+
+        const reportLink = this.modal.querySelector('.modal-btn-report');
+        if (reportLink) {
+            if (project.report) {
+                reportLink.href = project.report;
+                reportLink.style.display = 'inline-flex';
+            } else {
+                reportLink.href = '#';
+                reportLink.style.display = 'none';
+            }
         }
 
         techStack.innerHTML = project.tech
