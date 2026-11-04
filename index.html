@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=20260713">
     <link rel="icon" type="image/png" href="img/logo.png">
@@ -48,6 +48,14 @@
         <div class="scroll-progress"></div>
     </nav>
 
+    <svg class="pcb-trace" aria-hidden="true" viewBox="0 0 40 1800" preserveAspectRatio="none">
+        <path d="M20 0V180C20 220 8 220 8 260V620C8 660 32 660 32 700V1080C32 1120 12 1120 12 1160V1800"
+            pathLength="1" />
+        <circle cx="20" cy="180" r="4" />
+        <circle cx="8" cy="620" r="4" />
+        <circle cx="32" cy="1080" r="4" />
+    </svg>
+
     <section id="home" class="hero-section">
         <div class="hero-grid">
             <div class="hero-content">
@@ -68,33 +76,30 @@
                 </div>
 
                 <h1 class="hero-title" data-scroll-reveal>
-                    <span class="title-line">Anas</span>
-                    <span class="title-line title-highlight">KIOUAZ</span>
+                    <span class="title-line">Je construis,</span>
+                    <span class="title-line title-highlight">je teste, je livre.</span>
                 </h1>
 
                 <div class="hero-subtitle" data-scroll-reveal>
-                    <p class="subtitle-large" data-i18n="hero.role">Développeur logiciel — Backend, Data &amp; IA</p>
-                    <p class="subtitle-location" data-i18n="hero.location">Python · Java · Symfony · Docker — Étudiant
-                        BUT Informatique à Grenoble</p>
+                    <p class="subtitle-large">Étudiant en 3ᵉ année de BUT Informatique.</p>
+                    <p class="subtitle-location">J'apprends vite, je prototype encore plus vite, et je structure pour que ça tienne.</p>
                 </div>
 
                 <p class="hero-description" data-scroll-reveal data-i18n="hero.description">
-                    Étudiant en 2ᵉ année de BUT Informatique à l'IUT2 de Grenoble. Je conçois des applications backend,
-                    des outils data et des automatisations IA, du modèle relationnel à la mise en production
-                    conteneurisée. Je cherche une alternance à partir de septembre 2026, rythme 3 semaines entreprise /
-                    1 semaine école.
+                    Je transforme un problème en prototype, puis un prototype en produit livrable — backend, data,
+                    IA et infrastructure inclus.
                 </p>
 
                 <div class="hero-actions" data-scroll-reveal>
                     <a href="#projects" class="btn-primary">
-                        <span data-i18n="hero.btn-projects">Découvrir mes projets</span>
+                        <span>Voir ce que j'ai construit</span>
                         <div class="btn-glow"></div>
                     </a>
                     <a href="cv/CV-Anas-KIOUAZ.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-cv">
                         <span data-i18n="hero.btn-cv">Voir mon CV</span>
                     </a>
                     <a href="#contact" class="btn-secondary">
-                        <span data-i18n="hero.btn-contact">Entrer en contact</span>
+                        <span>Parlons de votre projet</span>
                     </a>
                 </div>
 
@@ -219,6 +224,14 @@
                         <div class="detail-row">
                             <span class="detail-label" data-i18n="about.license">Permis</span>
                             <span class="detail-value" data-i18n="about.license-value">Permis B </span>
+                        </div>
+                        <div class="workflow-card">
+                            <span class="section-number">Signature / Workflow</span>
+                            <div class="workflow-steps">
+                                <span><b>01</b> Tester</span>
+                                <span><b>02</b> Structurer</span>
+                                <span><b>03</b> Perfectionner</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -914,6 +927,7 @@
                                 <path d="M5 19L19 5M19 5H9M19 5V15" stroke="currentColor" stroke-width="2" />
                             </svg>
                         </a>
+                        <button class="copy-email" type="button" data-email="anas.kiouaz@gmail.com">Copier</button>
                     </div>
 
                     <div class="footer-socials" data-scroll-reveal>
