@@ -7,6 +7,8 @@ import { useState } from 'react';
 import { content } from '@/data/content';
 import { BlueprintTrace } from './components/blueprint-trace';
 import { CommandMenu } from './components/command-menu';
+import { CustomCursor } from './components/custom-cursor';
+import { HeroCanvas } from './components/hero-canvas';
 import { Preloader } from './components/preloader';
 
 export default function Home() {
@@ -20,6 +22,7 @@ export default function Home() {
   return (
     <>
       <Preloader />
+      <CustomCursor />
       <BlueprintTrace />
       <header className="site-header">
         <Link href="/" className="brand" aria-label="Accueil"><span>AK</span><em>BUILD LOG / 2026</em></Link>
@@ -31,7 +34,8 @@ export default function Home() {
 
       <main>
         <section className="hero section-shell" id="home">
-          <div className="hero-grid" />
+          <HeroCanvas />
+          <div className="hero-grid" aria-hidden="true" />
           <div className="hero-copy">
             <p className="kicker"><span className="status-dot" />Disponible pour une alternance · Septembre 2026</p>
             <h1>{content.hero.title}</h1>

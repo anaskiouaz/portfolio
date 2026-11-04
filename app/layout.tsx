@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
+import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { MotionShell } from './components/motion-shell';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const space = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });
+const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
   title: 'Anas KIOUAZ — Je construis, je teste, je livre.',
@@ -17,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr">
-      <body><MotionShell>{children}</MotionShell></body>
+      <body className={`${inter.variable} ${space.variable} ${mono.variable}`}><MotionShell>{children}</MotionShell></body>
     </html>
   );
 }

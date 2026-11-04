@@ -47,7 +47,7 @@ export const content = {
       built: 'Une application interne Node.js / TypeScript : ingestion CSV, PDF et web, enrichissement, scoring IA, dashboard et export CRM.',
       result: 'Un workflow ramené à moins de 30 minutes. Projet confidentiel, interface et architecture livrées pour la suite.',
       stack: ['Node.js 20', 'TypeScript', 'React', 'SQLite', 'Playwright', 'Claude API'],
-      image: '/img/wirepas_arch_placeholder.svg',
+      image: '/img/project_placeholder.svg',
       featured: true,
     },
     {
