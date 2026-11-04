@@ -12,6 +12,10 @@ class PortfolioUI {
         this.setupScrollReveal();
         this.setupSmoothScroll();
         this.setupNavigation();
+        this.setupSpotlights();
+        this.setupPcbTrace();
+        this.setupEmailCopy();
+        this.setupHeroWords();
         this.animateStats();
         this.animateSkillBars();
         this.animateLanguageBars();
@@ -84,6 +88,82 @@ class PortfolioUI {
                 link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
             });
         });
+    }
+
+    setupSpotlights() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        document.querySelectorAll('.project-card, .profile-card, .but-competence-card, .interest-card-new, .language-card-new')
+            .forEach(card => {
+                card.addEventListener('pointermove', (event) => {
+                    const rect = card.getBoundingClientRect();
+                    card.style.setProperty('--spot-x', `${event.clientX - rect.left}px`);
+                    card.style.setProperty('--spot-y', `${event.clientY - rect.top}px`);
+                });
+            });
+    }
+
+    setupPcbTrace() {
+        const trace = document.querySelector('.pcb-trace');
+        if (!trace) return;
+
+        const path = trace.querySelector('path');
+        const nodes = [...trace.querySelectorAll('circle')];
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const updateTrace = () => {
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = scrollable > 0 ? Math.min(1, window.scrollY / scrollable) : 0;
+            trace.style.setProperty('--trace-progress', reducedMotion ? 1 : progress);
+            nodes.forEach((node, index) => {
+                const threshold = (index + 1) / (nodes.length + 1);
+                node.style.setProperty('--node-opacity', progress >= threshold ? 1 : .35);
+            });
+        };
+
+        if (path && !reducedMotion) path.style.strokeDasharray = '1';
+        updateTrace();
+        window.addEventListener('scroll', updateTrace, { passive: true });
+        window.addEventListener('resize', updateTrace);
+    }
+
+    setupEmailCopy() {
+        const copyButton = document.querySelector('.copy-email');
+        if (!copyButton) return;
+
+        copyButton.addEventListener('click', async () => {
+            const email = copyButton.dataset.email;
+            try {
+                await navigator.clipboard.writeText(email);
+                const originalText = copyButton.textContent;
+                copyButton.textContent = 'Copié';
+                copyButton.classList.add('copied');
+                window.setTimeout(() => {
+                    copyButton.textContent = originalText;
+                    copyButton.classList.remove('copied');
+                }, 1800);
+            } catch (error) {
+                copyButton.textContent = 'Sélectionnez l’email';
+            }
+        });
+    }
+
+    setupHeroWords() {
+        const title = document.querySelector('.hero-title');
+        if (!title || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        title.querySelectorAll('.title-line').forEach(line => {
+            const words = line.textContent.trim().split(/\s+/);
+            line.textContent = '';
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.className = 'hero-word';
+                span.textContent = word;
+                span.style.setProperty('--word-delay', `${index * 60}ms`);
+                line.append(span, ' ');
+            });
+        });
+        title.classList.add('hero-words-ready');
     }
 
     animateStats() {
